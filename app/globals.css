@@ -2,20 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+  width: 10px !important;
+  height: 10px !important;
 }
 
-@media (prefers-color-scheme: dark) {
+.swiper-pagination-bullet-active {
+  @apply bg-primary_green !important;
+}
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --radius: 0.5rem
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
