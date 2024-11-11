@@ -13,6 +13,24 @@
   @apply bg-primary_green !important;
 }
 
+.custom-spin-border:before{
+  content: "";
+  background-image: conic-gradient(
+    #15803d 20deg,
+    transparent 180deg
+  );
+  position: absolute;
+  height: 150%;
+  width: 150%;
+  animation: spin-border 2s linear infinite;
+}
+
+@keyframes spin-border {
+  100%{
+    transform: rotate(-360deg);
+  }
+}
+
 @layer base {
   :root {
     --radius: 0.5rem

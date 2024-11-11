@@ -10,7 +10,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 
 const page = () => {
   return (
-    <div className='text-white flex gap-3 '>
+    <div className='text-white flex flex-col md:flex-row gap-3 '>
       <div className='w-full p-2'>
         <h2 className='uppercase text-5xl tracking-widest text-center font-bold mb-5'>Skills</h2>
         <Image

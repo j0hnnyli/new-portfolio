@@ -11,6 +11,7 @@ export default {
   	extend: {
   		colors: {
   			primary_green: '#15803d',
+				error_red: '#ef4444',
 				HTML_color: '#ea580c',
 				CSS_color: '#2563eb',
 				HTMLCSS_mix: '#6b7280',

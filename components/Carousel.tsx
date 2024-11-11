@@ -21,8 +21,8 @@ const Carousel = ({ projects } : Props) => {
     <Swiper
       modules={[Navigation, Pagination, EffectCoverflow]}
       effect={'coverflow'}
-      spaceBetween={50}
-      slidesPerView={2}
+      spaceBetween={10}
+      slidesPerView={'auto'}
       centeredSlides={true}
       grabCursor={true}
       loop={true}
@@ -39,7 +39,15 @@ const Carousel = ({ projects } : Props) => {
       }}
       pagination={{el:'.custom-pagination' , clickable: true, type: 'bullets' }}
       scrollbar={{ draggable: true }}
-      className='my-10'
+      breakpoints={{
+        720: {
+          slidesPerView: 2
+        },
+        1024: {
+          slidesPerView: 2
+        }
+      }}
+      className='mt-10'
     >
       {projects.map((project) => (
         <SwiperSlide key={project.title}>

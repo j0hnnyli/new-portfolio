@@ -1,8 +1,5 @@
 import React from 'react'
 import projects from '@/lib/content/projects'
-import { div } from 'framer-motion/client'
-import Image from 'next/image'
-import ProjectCard from '@/components/ProjectCard'
 import Carousel from '@/components/Carousel'
 
 const page = () => {
