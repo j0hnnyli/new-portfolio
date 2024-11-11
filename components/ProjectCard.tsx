@@ -17,6 +17,7 @@ const ProjectCard = ({ project }: Props) => {
   return (
     <div
       key={project.title}
+      onClick={() => setIsHover(!isHover)}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       className="h-[200px] md:h-[300px] w-[85%] md:w-[480px] mx-auto relative"
