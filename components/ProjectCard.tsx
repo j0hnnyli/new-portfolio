@@ -19,7 +19,7 @@ const ProjectCard = ({ project }: Props) => {
       key={project.title}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="h-[200px] md:h-[300px] w-[85%] lg:w-full mx-auto relative"
+      className="h-[200px] md:h-[300px] w-[85%] md:w-[480px] mx-auto relative"
     >
       <h2 className="absolute w-auto top-0 bg-black py-2 px-4 rounded-bl-2xl rounded-br-2xl font-bold tracking-wider text-primary_green left-1/2 -translate-x-1/2 shadow-xl shadow-black">
         {project.title}

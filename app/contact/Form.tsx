@@ -84,7 +84,7 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="md:w-[60%] mx-auto p-3">
+      <form onSubmit={handleSubmit} className="md:w-[80%] lg:w-[60%] mx-auto p-3">
         <div className="flex flex-col md:flex-row items-center gap-5 mb-5">
           <div className="flex flex-col w-full">
             <label htmlFor="first">

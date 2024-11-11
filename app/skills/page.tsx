@@ -22,7 +22,7 @@ const page = () => {
         />
       </div>
 
-      <div className='w-full p-2'>
+      <div className='w-full p-5'>
         <div className='mb-5'>
           <div className='flex items-center justify-between'>
             <p className='text-HTMLCSS_mix font-bold tracking-widest text-xl'>HTML/CSS</p>
