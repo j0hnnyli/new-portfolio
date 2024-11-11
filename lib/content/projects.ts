@@ -18,7 +18,7 @@ const projects : Projects[] = [
     type: "website"
   },
   {
-    title: "Inventory Management",
+    title: "Stockify",
     link: "https://inventorycrud.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/inventory-server",
     img: "/inventoryCRUD.png",
