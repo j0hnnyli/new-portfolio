@@ -27,13 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative lg:flex items-center justify-center lg:h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
         <Navbar />
         <div className="bg-black fixed h-screen w-screen opacity-60 z-10 top-0"></div>
         <div className="bg-[url('/gridBG.jpg')] bg-cover bg-center bg-no-repeat h-screen w-full fixed top-0"></div>
 
-        <main className="relative z-30 lg:w-[80%] max-w-[1500px] mx-auto mt-28 md:mt-20 ">
+        <main className="relative z-30 lg:w-[80%] max-w-[1500px] mx-auto mt-28 md:mt-25 ">
           {children}
         </main>
 

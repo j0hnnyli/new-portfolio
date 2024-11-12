@@ -176,11 +176,8 @@ const Form = () => {
       </form>
 
       <div className="flex flex-col items-center justify-center mb-5">
-        <h2 className="text-primary_green font-bold tracking-widest text-xl">
-          Email: lijohnny21@mgmail.com
-        </h2>
-        <h2 className="text-primary_green font-bold tracking-widest text-xl mt-1">
-          Phone: (347) 681-2466
+        <h2 className="font-bold tracking-widest text-xl">
+          Email: lijohnny21@gmail.com
         </h2>
         <div className="text-white flex gap-3 text-3xl mt-1">
           <Link
