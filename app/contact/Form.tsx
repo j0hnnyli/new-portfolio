@@ -57,8 +57,6 @@ const Form = () => {
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATEID!;
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLICKEY!;
 
-    emailjs.init(publicKey)
-
     const templateParams = {
       from_name : firstNameRef.current?.value,
       from_email: emailRef.current?.value,
