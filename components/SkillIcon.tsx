@@ -24,7 +24,6 @@ const SkillIcon = ({children, title} : Props) => {
     <div 
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
-      onClick={() => setIsFlipped(!isFlipped)}
       className='w-full h-[100px]'
     >
       <ReactCardFlip flipDirection='horizontal' isFlipped={isFlipped}>
