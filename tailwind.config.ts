@@ -21,6 +21,10 @@ export default {
 				React_color: '#38bdf8',
 				Nextjs_color: '#334155',
 				Tailwind_color: '#38bdf8',
+				Github_color: '#24292e',
+				Supabase_color: '#22c55e',
+				MongoDB_color: '#023430',
+				Postgresql_color: '#336791',
   			background: 'var(--background)',
   			foreground: 'var(--foreground)'
   		},

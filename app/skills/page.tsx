@@ -1,115 +1,67 @@
 import Image from 'next/image'
 import React from 'react'
-import ProgressBarComponent from '@/components/ProgressBarComponent'
+// import ProgressBarComponent from '@/components/ProgressBarComponent'
 import { FaGithub, FaHtml5, FaCss3, FaNodeJs, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiSupabaseFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiMongodb, SiTypescript } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
-
+import Reveal from '@/components/Reveal'
+import SkillIcon from '@/components/SkillIcon';
 
 const page = () => {
   return (
-    <div className='text-white flex flex-col md:flex-row gap-3 '>
-      <div className='w-full p-2'>
-        <h2 className='uppercase text-5xl tracking-widest text-center font-bold mb-5'>Skills</h2>
-        <Image
-          src="/puzzle.png"
-          alt="puzzles"
-          width={300}
-          height={200}
-          className='w-full'
-        />
+    <div className='my-10'>
+      <h2 className='uppercase text-5xl tracking-widest text-center font-bold mb-5 text-white'>Skills</h2> 
+      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 items-center justify-center p-2'> 
+        <SkillIcon title='HTML'>
+          <FaHtml5 className='text-8xl text-HTML_color mx-auto'/> 
+        </SkillIcon>
+        
+        <SkillIcon title='CSS'>
+          <FaCss3 className='text-8xl text-CSS_color w-full'/> 
+        </SkillIcon>
+
+        <SkillIcon title='Javascript'>
+          <IoLogoJavascript className='text-8xl text-Javascript_color w-full'/> 
+        </SkillIcon>
+        
+        <SkillIcon title='Typescript'>
+          <SiTypescript className='text-8xl text-Typescript_color w-full'/> 
+        </SkillIcon>
+
+        <SkillIcon title="ReactJS">
+          <FaReact className='text-8xl text-React_color w-full'/> 
+        </SkillIcon>
+
+        <SkillIcon title="NextJS">
+          <RiNextjsFill className='text-8xl text-Nextjs_color w-full'/> 
+        </SkillIcon>
+
+        <SkillIcon title="NodeJS">
+          <FaNodeJs className='text-8xl text-Nodejs_color w-full'/> 
+        </SkillIcon>
+
+        <SkillIcon title="Tailwind">
+          <RiTailwindCssFill className='text-8xl text-Tailwind_color w-full'/> 
+        </SkillIcon>
+
+        <SkillIcon title="GitHub">
+          <FaGithub className='text-8xl text-Github_color w-full'/> 
+        </SkillIcon>
+
+        <SkillIcon title="Supabase">
+          <RiSupabaseFill className='text-8xl text-Supabase_color w-full'/> 
+        </SkillIcon>
+
+        <SkillIcon title="MongoDB">
+          <SiMongodb className='text-8xl text-MongoDB_color w-full'/> 
+        </SkillIcon>
+
+        <SkillIcon title="Postgresql">
+          <BiLogoPostgresql className='text-8xl text-Postgresql_color w-full'/> 
+        </SkillIcon>
       </div>
-
-      <div className='w-full p-5'>
-        <div className='mb-5'>
-          <div className='flex items-center justify-between'>
-            <p className='text-HTMLCSS_mix font-bold tracking-widest text-xl'>HTML/CSS</p>
-            <div className='flex items-center gap-3 text-2xl'>
-              <FaHtml5 className='text-HTML_color'/>
-              <FaCss3 className='text-CSS_color'/>
-            </div>
-          </div>
-          <ProgressBarComponent progress={90} color='#6b7280'/>
-        </div>
-        
-        <div className='mb-5'>
-          <div className='flex items-center justify-between'>
-            <p className='text-Javascript_color font-bold tracking-widest text-xl'>Javascript</p>
-            <IoLogoJavascript className='text-2xl text-Javascript_color'/>
-          </div>
-          <ProgressBarComponent progress={80} color='#eab308'/>
-        </div>
-        
-        <div className='mb-5'>
-          <div className='flex items-center justify-between'>
-            <p className='text-Typescript_color font-bold tracking-widest text-xl'>Typescript</p>
-            <SiTypescript className='text-2xl text-Typescript_color'/>
-          </div>
-          <ProgressBarComponent progress={80} color='#1d4ed8'/>
-        </div>
-        
-        <div className='mb-5'>
-          <div className='flex items-center justify-between'>
-            <p className='text-React_color font-bold tracking-widest text-xl'>React</p>
-            <FaReact className='text-2xl text-React_color'/>
-          </div>
-          <ProgressBarComponent progress={80} color='#38bdf8'/>
-        </div>
-        
-        <div className='mb-5'>
-          <div className='flex items-center justify-between'>
-            <p className='text-Nextjs_color font-bold tracking-widest text-xl'>NextJs</p>
-            <RiNextjsFill className='text-2xl text-Nextjs_color'/>
-          </div>
-          <ProgressBarComponent progress={80} color='#334155'/>
-        </div>
-        
-        <div className='mb-5'>
-          <div className='flex items-center justify-between'>
-            <p className='text-Tailwind_color font-bold tracking-widest text-xl'>Tailwind CSS</p>
-            <RiTailwindCssFill className='text-2xl text-Tailwind_color'/>
-          </div>
-          <ProgressBarComponent progress={85} color='#38bdf8'/>
-        </div>
-
-        <div className='mb-5'>
-          <div className='flex items-center justify-between'>
-            <p className='text-Nodejs_color font-bold tracking-widest text-xl'>NodeJS</p>
-            <FaNodeJs className='text-2xl text-Nodejs_color'/>
-          </div>
-          <ProgressBarComponent progress={70} color='#166534'/>
-        </div>
-
-        <div>
-          <h2 className='uppercase text-3xl tracking-widest font-bold'>Others Skills:</h2>
-          <div className='flex gap-3 my-3'>
-            <div className='flex flex-col items-center justify-end'>
-              <FaGithub className='text-3xl text-slate-600'/>
-              <h2>GitHub</h2>
-            </div>
-            
-            <div className='flex flex-col items-center justify-end'>
-              <RiSupabaseFill className='text-3xl text-green-500'/>
-              <h2>Supabase</h2>
-            </div>
-            
-            <div className='flex flex-col items-center justify-end'>
-              <SiMongodb className='text-3xl text-green-700'/>
-              <h2>MongoDB</h2>
-            </div>
-            
-            <div className='flex flex-col items-center justify-end'>
-              <BiLogoPostgresql className='text-3xl text-blue-500'/>
-              <h2>Postgresql</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
     </div>
   )
 }
