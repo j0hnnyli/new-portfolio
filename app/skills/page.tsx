@@ -1,12 +1,8 @@
-import Image from 'next/image'
-import React from 'react'
-// import ProgressBarComponent from '@/components/ProgressBarComponent'
 import { FaGithub, FaHtml5, FaCss3, FaNodeJs, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiSupabaseFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiMongodb, SiTypescript } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
-import Reveal from '@/components/Reveal'
 import SkillIcon from '@/components/SkillIcon';
 
 const page = () => {
