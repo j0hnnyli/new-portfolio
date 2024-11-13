@@ -43,6 +43,7 @@ const ProjectCard = ({ project }: Props) => {
           <h2 className="text-primary_green font-bold tracking-widest text-center text-2xl my-2">
             {project.title}
           </h2>
+          {project.type === 'game' && <p className="text-red-500 text-center my-1">Only on Laptop/Desktop</p>}
           <div className="flex flex-wrap items-center gap-1 justify-center p-1 w-[80%] mx-auto">
             {project.tags.map((tag) => (
               <p
