@@ -33,6 +33,7 @@ export default {
 				Github_color: '#24292e',
 				Supabase_color: '#22c55e',
 				MongoDB_color: '#023430',
+				Framer_Motion_color: '#3b0764',
 				Postgresql_color: '#336791',
   			background: 'var(--background)',
   			foreground: 'var(--foreground)'

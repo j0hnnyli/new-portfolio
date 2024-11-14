@@ -30,7 +30,7 @@ export default function Home() {
             strings={["Web Developer", "Anime Lover", "A Gym-Goer"]}
           />
 
-          <div className="absolute bottom-0 right-0 text-white flex gap-3 text-3xl">
+          <div className=" text-white flex items-center justify-end gap-3 text-3xl">
             <Link href='https://x.com/Johnnyli31' target='_blank'
               className="hover:text-primary_green"
             >
@@ -52,7 +52,7 @@ export default function Home() {
           Hello, I&apos;m a self-taught developer on a journey towards a career in software engineering. My coding journey started as an exploration, beginning with HTML and CSS. The markup language and cascading style sheets empowered me to start building static websites. However, this only made me want to learn more and build websites with user interaction. This is where I picked up JavaScript. JavaScript opened the door to frameworks like React and Next.js. With this knowledge and these tools at my disposal, I&apos;m able to build dynamic and user-friendly UI/UX websites. Now I&apos;m learning algorithms and trying to unravel their mysteries
         </p>
         <p className="text-white text-lg">
-          Outside of web development, I enjoy staying active and unwinding with some anime or shows. Whether it&apos;s going for a hike, hitting the gym, or binge-watching my favorite series, I find that both physical activity and relaxation help me recharge. I believe exercise boosts not only physical health but also mental clarity and creativity, while a good show helps me unwind and find inspiration.
+          Outside of web development, I enjoy staying active and unwinding with some anime or shows. Whether it&apos;s hitting the gym, or binge watching my favorite series, I find that both physical activity and relaxation help me recharge. I believe exercise boosts not only physical health but also mental clarity and creativity, while a good show helps me unwind and find inspiration.
         </p>
       </div>
     </div>

@@ -4,6 +4,8 @@ import { RiSupabaseFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri"
 import { SiMongodb, SiTypescript } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import SkillIcon from '@/components/SkillIcon';
+import { TbBrandFramerMotion } from "react-icons/tb"
+import { SiShadcnui } from "react-icons/si";
 
 const page = () => {
   return (
@@ -32,6 +34,14 @@ const page = () => {
 
         <SkillIcon title="Tailwind">
           <RiTailwindCssFill className='text-8xl text-Tailwind_color w-full'/> 
+        </SkillIcon>
+        
+        <SkillIcon title="Framer Motion">
+          <TbBrandFramerMotion className='text-8xl text-Framer_Motion_color w-full'/> 
+        </SkillIcon>
+        
+        <SkillIcon title="Shadcn/ui">
+          <SiShadcnui className='text-8xl text-white w-full'/> 
         </SkillIcon>
 
         <SkillIcon title='HTML'>
