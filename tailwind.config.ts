@@ -9,6 +9,15 @@ export default {
   ],
   theme: {
   	extend: {
+			animation: {
+        'spin-from-45': 'spin-from-45 3s linear infinite',
+      },
+      keyframes: {
+        'spin-from-45': {
+          '0%': { transform: 'rotate(45deg)' },
+          '100%': { transform: 'rotate(405deg)' },
+        },
+      },
   		colors: {
   			primary_green: '#15803d',
 				error_red: '#ef4444',
