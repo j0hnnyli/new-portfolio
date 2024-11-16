@@ -21,7 +21,7 @@ const ProjectCard = ({ project }: Props) => {
       onMouseLeave={() => setIsHover(false)}
       className="w-full h-[200px] relative flex items-center justify-center overflow-hidden"
     >
-      <div className={`absolute w-[50%] h-[450px] bg-primary_green z-10 rotate-45 ${isHover && 'animate-spin-from-45'}`}
+      <div className={`absolute w-[40%] h-[450px] bg-primary_green z-10 rotate-45 ${isHover && 'animate-spin-from-45'}`}
       ></div>
       
       <div
