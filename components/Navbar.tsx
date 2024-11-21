@@ -15,7 +15,7 @@ const Navbar = () => {
           tip='Home'
         >
           <Link href='/'>
-            <FaHouse className='text-3xl p-1 rounded-full hover:bg-primary_green '/>
+            <FaHouse className='text-3xl p-1 rounded-full hover:text-primary_green'/>
           </Link>
         </HoverTip>
         
@@ -23,7 +23,7 @@ const Navbar = () => {
           tip='Skills'
         >
           <Link href='/skills'>
-            <IoCodeWorking className='text-3xl p-1 rounded-full hover:bg-primary_green'/>
+            <IoCodeWorking className='text-3xl p-1 rounded-full hover:text-primary_green'/>
           </Link>
         </HoverTip>
 
@@ -31,7 +31,7 @@ const Navbar = () => {
           tip='Projects'
         >
           <Link href="/projects">
-            <LuLayoutPanelLeft className='text-3xl p-1 rounded-full hover:bg-primary_green'/>
+            <LuLayoutPanelLeft className='text-3xl p-1 rounded-full hover:text-primary_green'/>
           </Link>
         </HoverTip>
 
@@ -39,7 +39,7 @@ const Navbar = () => {
           tip='Contact'
         >
           <Link href="/contact">
-            <IoIosContact className='text-3xl p-1 rounded-full hover:bg-primary_green'/>
+            <IoIosContact className='text-3xl p-1 rounded-full hover:text-primary_green'/>
           </Link>
         </HoverTip>
       </nav>
