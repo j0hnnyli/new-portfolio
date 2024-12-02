@@ -18,6 +18,14 @@ const projects : Projects[] = [
     type:"game",
   },
   {
+    title: "Stockify",
+    link: "https://inventorycrud.vercel.app/",
+    gitLink: "https://github.com/j0hnnyli/inventory-server",
+    img: "/inventoryCRUD.png",
+    tags: ["NodeJS", "NextJS", "Tailwind", "Responsive", "Express", "MongoDB", "Typescript", "Shadcn"],
+    type: "website"
+  },
+  {
     title: "SwiftShop",
     link: "https://swiftshop-alpha.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/swiftshop",
@@ -33,14 +41,6 @@ const projects : Projects[] = [
     tags: ["API", "NextJS", "Tailwind", "Responsive", "Typescript", "Shadcn"],
     type: "website"
   },
-  {
-    title: "Stockify",
-    link: "https://inventorycrud.vercel.app/",
-    gitLink: "https://github.com/j0hnnyli/inventory-server",
-    img: "/inventoryCRUD.png",
-    tags: ["NodeJS", "NextJS", "Tailwind", "Responsive", "Express", "MongoDB", "Typescript", "Shadcn"],
-    type: "website"
-  }
 ]
 
 export default projects;
