@@ -38,7 +38,7 @@ const projects : Projects[] = [
     link: "https://recipehub-swart.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/recipe_nextjs",
     img: "/recipehub.png",
-    tags: ["API", "NextJS", "Tailwind", "Responsive", "Typescript", "Shadcn"],
+    tags: ["API", "NextJS", "Tailwind", "Responsive", "Typescript", "Shadcn", "Redis"],
     type: "website"
   },
 ]
