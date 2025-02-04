@@ -1,5 +1,5 @@
 import { FaGithub, FaHtml5, FaCss3, FaNodeJs, FaReact } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
+import { IoLogoJavascript, IoLogoVue } from "react-icons/io5";
 import { RiSupabaseFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiMongodb, SiTypescript } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -22,6 +22,10 @@ const page = () => {
 
         <SkillIcon title="ReactJS">
           <FaReact className='text-8xl text-React_color w-full'/> 
+        </SkillIcon>
+        
+        <SkillIcon title="VuetJS">
+          <IoLogoVue className='text-8xl text-Vue_color w-full'/> 
         </SkillIcon>
 
         <SkillIcon title="NextJS">
