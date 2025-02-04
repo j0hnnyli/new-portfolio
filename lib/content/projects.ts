@@ -34,11 +34,11 @@ const projects : Projects[] = [
     type: 'website'
   },
   {
-    title: "RecipeHub",
-    link: "https://recipehub-swart.vercel.app/",
-    gitLink: "https://github.com/j0hnnyli/recipe_nextjs",
-    img: "/recipehub.png",
-    tags: ["API", "NextJS", "Tailwind", "Responsive", "Typescript", "Shadcn"],
+    title: "Quizes",
+    link: "https://quizes-one.vercel.app/",
+    gitLink: "https://github.com/j0hnnyli/quizes",
+    img: "/quizes.png",
+    tags: ["Typescript", "Vue", "Tailwind", "Responsive", "Gsap"],
     type: "website"
   },
 ]
