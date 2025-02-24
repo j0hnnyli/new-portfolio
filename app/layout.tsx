@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MediaNavbar from "@/components/MediaNavbar";
+import Image from "next/image";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,9 +39,14 @@ export default function RootLayout({
       >
         <Navbar />
         <MediaNavbar/>
-        <div className="bg-black fixed h-screen w-screen opacity-60 z-10 top-0"></div>
-        <div className="bg-[url('/gridBG.jpg')] bg-cover bg-center bg-no-repeat h-screen w-full fixed top-0"></div>
-
+        <Image
+          src='/gridBG.jpg'
+          alt='grid-bg'
+          fill
+          objectFit="cover"
+          priority
+          className=" brightness-50"
+        /> 
         <main className="relative z-30 max-w-[1500px] md:w-[90%] lg:w-[80%] mx-auto mt-24 md:mt-0">
           {children}
         </main>
