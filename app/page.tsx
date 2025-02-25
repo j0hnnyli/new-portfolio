@@ -31,7 +31,7 @@ export default function Home() {
           />
 
           <div className=" text-white flex items-center justify-end gap-3 text-3xl">
-            <Link href='https://x.com/Johnnyli31' target='_blank'
+            <Link href='https://x.com/jojotech31' target='_blank'
               className="hover:text-primary_green"
             >
               <FaXTwitter/>
