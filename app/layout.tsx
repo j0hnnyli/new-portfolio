@@ -35,9 +35,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative md:flex md:justify-center md:items-center md:h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative md:flex md:justify-center md:items-center h-screen`}
       >
-        <Navbar />
         <MediaNavbar/>
         <Image
           src='/gridBG.jpg'
@@ -47,7 +46,8 @@ export default function RootLayout({
           priority
           className="brightness-50 h-full w-full fixed object-cover"
         /> 
-        <main className="relative z-30 max-w-[1500px] md:w-[90%] lg:w-[80%] mx-auto pt-20 md:pt-0">
+        <main className="relative z-30 max-w-[1500px] md:w-[80%] mx-auto pt-20 md:pt-0">
+          <Navbar />
           {children}
         </main>
 
