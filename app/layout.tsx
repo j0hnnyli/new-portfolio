@@ -42,12 +42,12 @@ export default function RootLayout({
         <Image
           src='/gridBG.jpg'
           alt='grid-bg'
-          fill
-          objectFit="cover"
+          width={300}
+          height={300}
           priority
-          className=" brightness-50"
+          className="brightness-50 h-full w-full fixed object-cover"
         /> 
-        <main className="relative z-30 max-w-[1500px] md:w-[90%] lg:w-[80%] mx-auto mt-24 md:mt-0">
+        <main className="relative z-30 max-w-[1500px] md:w-[90%] lg:w-[80%] mx-auto pt-20 md:pt-0">
           {children}
         </main>
 
