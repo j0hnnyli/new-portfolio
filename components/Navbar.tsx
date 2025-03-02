@@ -8,8 +8,8 @@ import HoverTip from './HoverTip';
 
 const Navbar = () => {
   return (
-    <div className='hidden fixed top-5 z-50 md:flex items-center justify-center w-full'>
-      <nav className='flex items-center gap-3 text-white  py-2 px-6 border border-primary_green rounded-full mx-auto bg-black'>
+    <div className='hidden absolute -left-14 bottom-1/2 transform translate-y-1/2 z-50 md:inline'>
+      <nav className='flex flex-col items-center gap-3 text-white  p-2 border border-primary_green rounded-full mx-auto bg-black'>
         <h2 className='text-3xl font-bold text-primary_green'>JL</h2>
         <HoverTip
           tip='Home'

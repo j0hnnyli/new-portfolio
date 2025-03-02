@@ -18,7 +18,7 @@ const HoverTip = ({ tip, children } : Props) => {
         <TooltipTrigger>
           {children}
         </TooltipTrigger>
-        <TooltipContent>
+        <TooltipContent side='right'>
           <p>{tip}</p>
         </TooltipContent>
       </Tooltip>
