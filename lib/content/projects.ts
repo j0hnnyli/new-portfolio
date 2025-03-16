@@ -2,27 +2,27 @@ import { Projects } from "../types/Project";
 
 const projects : Projects[] = [
   {
+    title: "Desserts",
+    link: "https://desserts-murex.vercel.app/",
+    gitLink: "https://github.com/j0hnnyli/desserts",
+    img: "/desserts.png",
+    tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "Framer-motion", "Vitest"],
+    type: "website"
+  },
+  {
+    title: "RecipeHub",
+    link: "https://recipe-chi-lilac.vercel.app/",
+    gitLink: "https://github.com/j0hnnyli/recipe",
+    img: "/recipehub.png",
+    tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "GSAP", "Firebase-Firestore", "Firsbase-Auth", "Shadcn-UI"],
+    type: "website"
+  },
+  {
     title: "Anime Horizon",
     link: "https://animehorizon.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/AnimeHorizon",
     img: "/animehorizon.png",
-    tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "Shadcn"],
-    type: "website"
-  },
-  {
-    title: "Ball Havoc",
-    link: "https://j0hnnyli.github.io/ball-havoc/",
-    gitLink: "https://github.com/j0hnnyli/ball-havoc?tab=readme-ov-file",
-    img: "/ballhavoc.png",
-    tags: ["HTML", "CSS", "Canvas", "Javascript"],
-    type:"game",
-  },
-  {
-    title: "Stockify",
-    link: "https://inventorycrud.vercel.app/",
-    gitLink: "https://github.com/j0hnnyli/inventory-server",
-    img: "/inventoryCRUD.png",
-    tags: ["NodeJS", "NextJS", "Tailwind", "Responsive", "Express", "MongoDB", "Typescript", "Shadcn"],
+    tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "Shadcn-UI"],
     type: "website"
   },
   {
@@ -30,7 +30,7 @@ const projects : Projects[] = [
     link: "https://swiftshop-alpha.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/swiftshop",
     img: "/swiftshop.png",
-    tags: ["NextJS", "Supabase", "Tailwind", "Responsive", "Typescript", "Framer-Motion", "Shadcn"],
+    tags: ["NextJS", "Supabase", "Tailwind", "Responsive", "Typescript", "Framer-Motion", "Shadcn-UI"],
     type: 'website'
   },
   {
