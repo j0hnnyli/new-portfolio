@@ -14,7 +14,7 @@ const projects : Projects[] = [
     link: "https://recipe-chi-lilac.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/recipe",
     img: "/recipehub.png",
-    tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "GSAP", "Firebase-Firestore", "Firsbase-Auth"],
+    tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "GSAP", "Firebase-Firestore", "Firsbase-Auth", "Shadcn-UI"],
     type: "website"
   },
   {
@@ -22,7 +22,7 @@ const projects : Projects[] = [
     link: "https://animehorizon.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/AnimeHorizon",
     img: "/animehorizon.png",
-    tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "Shadcn"],
+    tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "Shadcn-UI"],
     type: "website"
   },
   {
@@ -30,7 +30,7 @@ const projects : Projects[] = [
     link: "https://swiftshop-alpha.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/swiftshop",
     img: "/swiftshop.png",
-    tags: ["NextJS", "Supabase", "Tailwind", "Responsive", "Typescript", "Framer-Motion", "Shadcn"],
+    tags: ["NextJS", "Supabase", "Tailwind", "Responsive", "Typescript", "Framer-Motion", "Shadcn-UI"],
     type: 'website'
   },
   {
