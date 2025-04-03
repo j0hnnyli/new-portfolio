@@ -27,7 +27,7 @@ export default function Home() {
             <span className="text-white mx-2">I&apos;m Johnny Li</span>
           </h2>
           <TypewriterComponent
-            strings={["Web Developer", "Anime Lover", "A Gym-Goer"]}
+            strings={["Front-End Developer", "Anime Lover", "A Gym-Goer"]}
           />
 
           <div className=" text-white flex items-center justify-end gap-3 text-3xl">
@@ -49,10 +49,10 @@ export default function Home() {
       <div className="w-full mt-5">
         <h2 className="text-3xl text-primary_green font-bold tracking-widest">About Me</h2>
         <p className="text-white my-5 text-lg">
-          My coding journey started as an exploration, beginning with HTML and CSS. The markup language and cascading style sheets empowered me to start building static websites. However, this only made me want to learn more and build websites with user interaction. This is where I picked up JavaScript. JavaScript opened the door to frameworks like React and Next.js. With these skils and tools at my disposal, I&apos;m able to bring your vision and designs to life!
+          Front-End Developer with experience in JavaScript, TypeScript, and frameworks such as React, Next.js, and Vue.js. I enjoy building user-friendly, responsive web applications with engaging animations using Framer-motion and GSAP. I am always eager to expand my skill set and stay updated with the latest technologies in order to build better user experiences. With these skils and tools at my disposal, I&apos;m able to bring your vision and designs to life!
         </p>
         <p className="text-white text-lg">
-          Outside of web development, I enjoy staying active and unwinding with some anime or shows. Whether it&apos;s hitting the gym, catching up on my favorite series. I find that both physical activity and relaxation help me recharge. I believe exercise boosts not only physical health but also mental clarity and creativity, while a good show helps me unwind and find inspiration.
+          Outside of coding, I enjoy staying active and unwinding with some anime or shows. Whether it&apos;s hitting the gym, catching up on my favorite series. I find that both physical activity and relaxation help me recharge. I believe exercise boosts not only physical health but also mental clarity and creativity, while a good show helps me unwind and find inspiration.
         </p>
       </div>
     </div>
