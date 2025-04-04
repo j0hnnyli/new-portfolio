@@ -2,6 +2,14 @@ import { Projects } from "../types/Project";
 
 const projects : Projects[] = [
   {
+    title: "Ascend",
+    link: "https://ascend-mu.vercel.app/",
+    gitLink: "https://github.com/j0hnnyli/ascend",
+    img: "/ascend.png",
+    tags: ["NextJS", "Supabase", "Tailwind", "Responsive", "Typescript", "Framer-Motion", "Shadcn-UI"],
+    type: 'website'
+  },
+  {
     title: "Desserts",
     link: "https://desserts-murex.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/desserts",
@@ -24,14 +32,6 @@ const projects : Projects[] = [
     img: "/animehorizon.png",
     tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "Shadcn-UI"],
     type: "website"
-  },
-  {
-    title: "SwiftShop",
-    link: "https://swiftshop-alpha.vercel.app/",
-    gitLink: "https://github.com/j0hnnyli/swiftshop",
-    img: "/swiftshop.png",
-    tags: ["NextJS", "Supabase", "Tailwind", "Responsive", "Typescript", "Framer-Motion", "Shadcn-UI"],
-    type: 'website'
   },
   {
     title: "Quizes",
