@@ -1,5 +1,5 @@
 <a href="https://codingjohnny.com/">
-  <video src="/public/portfoliovideo.mp4" autoplay loop muted playsinline></video>
+  <img src="/public/portfolio.png" alt="portfolio"></img>
 </a>
 
 ## My Profolio
