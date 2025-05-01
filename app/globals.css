@@ -2,15 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.swiper-pagination-bullet {
-  background-color: white !important;
-  width: 10px !important;
-  height: 10px !important;
+:root{
+  --primary-color : #F9F6EE;
+  --secondary-color : #363c45;
+  --third-color : #8A4D9D;
 }
 
-.swiper-pagination-bullet-active {
-  @apply bg-primary_green !important;
+body{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.max_width{
+  max-width: 1300px;
+  margin: auto;
 }
 
 .custom-spin-border:before{

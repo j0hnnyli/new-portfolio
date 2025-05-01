@@ -7,7 +7,7 @@ type Props = {
 
 const TypewriterComponent = ({strings}: Props) => {
   return (
-    <div className='text-white text-2xl tracking-widest'>
+    <div className='text-3xl md:text-3.5xl lg:text-5xl tracking-widest'>
       <Typewriter
         options={{
           strings: strings,
