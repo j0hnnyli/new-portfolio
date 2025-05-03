@@ -32,7 +32,7 @@ const SkillIcon = ({children, title} : Props) => {
         </div>
 
         <div className='flex items-center justify-center h-[100px] w-full'>
-          <h2 className='text-white font-bold tracking-wide text-3xl text-center'>{title}</h2>
+          <h2 className='text-secondary_color font-bold tracking-wide text-lg text-center'>{title}</h2>
         </div>
       </ReactCardFlip>
     </div>

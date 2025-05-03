@@ -2,38 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  --primary-color : #F9F6EE;
-  --secondary-color : #363c45;
-  --third-color : #8A4D9D;
-}
-
-body{
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
 .max_width{
-  max-width: 1300px;
+  max-width: 1200px;
   margin: auto;
-}
-
-.custom-spin-border:before{
-  content: "";
-  background-image: conic-gradient(
-    #15803d 20deg,
-    transparent 180deg
-  );
-  position: absolute;
-  height: 150%;
-  width: 150%;
-  animation: spin-border 2s linear infinite;
-}
-
-@keyframes spin-border {
-  100%{
-    transform: rotate(-360deg);
-  }
 }
 
 @layer base {
