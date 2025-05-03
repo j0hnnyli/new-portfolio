@@ -1,6 +1,5 @@
 'use client'
 
-import { div } from "framer-motion/client";
 import { FaChevronUp } from "react-icons/fa";
 
 const ScrollTop = () => {
