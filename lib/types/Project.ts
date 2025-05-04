@@ -4,5 +4,5 @@ export type Projects = {
   gitLink: string;
   img: string;
   tags: string[];
-  type: 'website' | 'game';
+  desc:string;
 }

@@ -1,8 +1,11 @@
 "use client";
 
 import React, { FormEvent, useRef, useState } from "react";
+import { FiArrowUpRight } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 import Link from "next/link";
 import emailjs from '@emailjs/browser'
 
@@ -84,15 +87,12 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="md:w-[80%] lg:w-[60%] mx-auto p-3">
-        <div className="flex flex-col md:flex-row items-center gap-5 mb-5">
-          <div className="flex flex-col w-full">
-            <label htmlFor="first">
-              First Name:*{" "}
-              {firstError && (
-                <span className="text-error_red">Invalid Name</span>
-              )}
-            </label>
+      <form 
+        onSubmit={handleSubmit} 
+        className="w-full md:w-[50%]"
+      >
+        <div className="flex items-center gap-5 mb-5 justify-between">
+          <div className="flex flex-col w-full relative">
             <input
               ref={firstNameRef}
               autoFocus={firstError}
@@ -101,32 +101,30 @@ const Form = () => {
               }}
               type="text"
               id="first"
-              placeholder="Johnny . . ."
-              className={`py-2 px-4 w-full mt-1 outline-none ${
-                firstError && "outline-error_red"
-              } text-black rounded-xl`}
+              placeholder="First Name *"
+              className={`py-2 w-full mt-1 outline-none bg-primary_color border-b ${
+                firstError ? "border-error_red" : "border-secondary_color"
+              } text-secondary_color `}
             />
+            <p>
+              {firstError && (
+                <span className="text-error_red text-sm absolute -bottom-5">Invalid Name</span>
+              )}
+            </p>
           </div>
 
-          <div className="flex flex-col w-full">
-            <label htmlFor="last">Last Name:</label>
+          <div className="w-full">
             <input
               ref={lastNameRef}
               type="text"
               id="last"
-              placeholder="Li . . ."
-              className="py-2 px-4 w-full mt-1 outline-none text-black rounded-xl"
+              placeholder="Last Name"
+              className="py-2 w-full mt-1 outline-none bg-primary_color border-b border-secondary_color"
             />
           </div>
         </div>
 
-        <div className="mb-5">
-          <label htmlFor="email">
-            Email:*{" "}
-            {emailError && (
-              <span className="text-error_red">Invalid Email</span>
-            )}
-          </label>
+        <div className="w-full relative mb-5">
           <input
             ref={emailRef}
             autoFocus={emailError}
@@ -135,20 +133,19 @@ const Form = () => {
             }}
             type="email"
             id="email"
-            placeholder="example@gmail.com"
-            className={`py-2 px-4 w-full mt-1 outline-none ${
-              emailError && "outline-error_red"
-            } text-black rounded-xl `}
+            placeholder="Email *"
+            className={`py-2 w-full mt-1 outline-none bg-primary_color border-b ${
+              emailError ? "border-error_red" : "border-secondary_color"
+            } text-secondary_color`}
           />
+          <p>
+            {emailError && (
+              <span className="text-error_red text-sm absolute -bottom-5">Invalid Email</span>
+            )}
+          </p>
         </div>
 
-        <div className="flex flex-col">
-          <label htmlFor="message">
-            Message:*{" "}
-            {messageError && (
-              <span className="text-error_red">Message Was Too Short!</span>
-            )}
-          </label>
+        <div className="w-full relative mb-5">
           <textarea
             name="message"
             id="message"
@@ -159,44 +156,34 @@ const Form = () => {
             placeholder="Hello! I woud love to connect with you . . ."
             cols={10}
             rows={5}
-            className={`rounded-xl mt-1 text-black py-2 px-4 outline-none ${
-              messageError && "outline-error_red"
+            className={`py-2 w-full mt-1 outline-none bg-primary_color border-b ${
+              messageError ? "border-error_red" : "border-secondary_color"
             }`}
           ></textarea>
+          <p>
+            {messageError && (
+              <span className="text-error_red text-sm absolute -bottom-5">Message Was Too Short!</span>
+            )}
+          </p>
         </div>
         
         <div className="flex items-center">
-          <button className="bg-primary_green py-2 px-4 rounded-xl my-5 hover:bg-green-800 hover:shadow-2xl hover:shadow-primary_green">
-            SEND
-          </button>
-          {isSending && <p className="text-white animate-pulse mx-3">Sending . . .</p>}
-          {sucess && <p className="text-green-300 mx-3 text-md">Success! Will get back to you Soon!</p>}
+          <div className="relative group">
+            <button className="py-2 flex">
+              <span>
+                SEND
+              </span>
+              <FiArrowUpRight className="text-md mt-1 group-hover:-mt-[1px] group-hover:ml-1 transition-all duration-300 ease-in-out"/>
+            </button>
+
+            <span className='absolute bottom-[-3px] left-0 h-[2px] bg-third_color w-full scale-x-0 group-hover:scale-x-100 origin-left duration-300 ease-in-out'/>
+          </div>
+
+          {isSending && <p className="text-secondary_color animate-pulse mx-3">Sending . . .</p>}
+          {sucess && <p className="text-green-500 mx-3 text-md">Success! Will get back to you Soon!</p>}
           {failed && <p className="text-red-600 mx-3 text-md">Sorry Messaged Failed! Please try again</p>}
         </div>
       </form>
-
-      <div className="flex flex-col items-center justify-center mb-5">
-        <h2 className="font-bold tracking-widest text-xl">
-          Email: lijohnny21@gmail.com
-        </h2>
-        <div className="text-white flex gap-3 text-3xl mt-1">
-          <Link
-            href="https://x.com/Johnnyli31"
-            target="_blank"
-            className="hover:text-primary_green"
-          >
-            <FaXTwitter />
-          </Link>
-
-          <Link
-            href="https://github.com/j0hnnyli"
-            target="_blank"
-            className="hover:text-primary_green"
-          >
-            <FaGithub />
-          </Link>
-        </div>
-      </div>
     </>
   );
 };

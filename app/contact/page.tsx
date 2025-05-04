@@ -3,9 +3,20 @@ import Form from './Form'
 
 const page = () => {
   return (
-    <div className='text-white'>
-      <h2 className='text-center font-bold text-5xl mb-5'>Contact Me</h2>
-      <Form/>
+    <div className='pt-20 md:pt-24'>
+      <div className='flex flex-col md:flex-row justify-between gap-5 py-10 px-5 max_width'>
+        <div className="flex flex-col items-start">
+          <div className="border border-secondary_color rounded-full flex items-center gap-2 px-2" >
+            <div className="h-[10px] w-[10px] rounded-full bg-third_color animate-pulse"/>
+            <p className="text-sm text-secondary_color">Contact Me</p>
+          </div>
+          <h2 className="font-playfair text-4xl font-bold italic">
+            Let&apos;s Get in Touch
+          </h2>
+        </div>
+        
+        <Form/>
+      </div>
     </div>
   )
 }

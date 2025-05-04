@@ -4,12 +4,26 @@ import ProjectCard from '@/components/ProjectCard'
 
 const page = () => {
   return (
-    <div className='text-white'>
-      <h2 className='text-5xl font-bold tracking-widest text-center'>My Projects</h2>
-      <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-3 my-10 p-2">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} project={project}/>
-        ))}
+    <div className='max_width pt-20 md:pt-24 '>
+      <div className='px-5 py-10'>
+        <div className="flex flex-col items-start">
+          <div className="border border-secondary_color rounded-full flex items-center gap-2 px-2" >
+            <div className="h-[10px] w-[10px] rounded-full bg-third_color animate-pulse"/>
+            <p className="text-sm text-secondary_color">Design Meets Code</p>
+          </div>
+          <h2 className="font-playfair text-4xl font-bold italic">
+            Projects
+          </h2>
+        </div>
+
+        <section className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-10'>
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              project={project}
+            />
+          ))}
+        </section>
       </div>
     </div>
   )

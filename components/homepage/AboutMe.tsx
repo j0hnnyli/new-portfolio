@@ -23,7 +23,7 @@ const AboutMe = () => {
             <div className="h-[10px] w-[10px] rounded-full bg-third_color animate-pulse"/>
             <p className="text-sm text-secondary_color">About Me</p>
           </div>
-          <h2 className="font-playfair italic text-4xl font-bold">About</h2>
+          <h2 className="font-playfair italic text-4xl font-bold">Get to Know Me</h2>
         </div>
         
 
