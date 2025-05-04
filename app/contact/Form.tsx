@@ -2,11 +2,6 @@
 
 import React, { FormEvent, useRef, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-import Link from "next/link";
 import emailjs from '@emailjs/browser'
 
 const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;

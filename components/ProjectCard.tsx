@@ -34,7 +34,10 @@ const ProjectCard = ({ project }: Props) => {
 
         <div className="flex flex-wrap gap-1">
           {project.tags.map((tag) => (
-            <span className="px-3 py-1 bg-secondary_color bg-opacity-20 text-secondary_color text-xs rounded-full">
+            <span
+              key={tag} 
+              className="px-3 py-1 bg-secondary_color bg-opacity-20 text-secondary_color text-xs rounded-full"
+            >
             {tag}
           </span>
           ))}
