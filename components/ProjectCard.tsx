@@ -5,7 +5,6 @@ import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import { FiArrowUpRight } from "react-icons/fi";
 
-
 type Props = {
   project: Projects;
 };
@@ -13,8 +12,11 @@ type Props = {
 const ProjectCard = ({ project }: Props) => {
 
   return (
-    <div className="flex flex-col lg:flex-row gap-2 group p-2 hover:bg-secondary_color hover:bg-opacity-5 rounded-xl overflow-hidden">
-      <div className="w-full lg:w-[50%] max-w-[250px] h-[150px] relative">
+    <div className="flex flex-col lg:flex-row gap-2 group p-2 rounded-xl overflow-hidden relative">
+      <div className="absolute inset-0 z-0 bg-secondary_color opacity-5 scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100" />
+
+
+      <div className="w-full lg:w-[50%] max-w-[250px] h-[150px] relative z-10">
         <Image 
           src={project.img}
           alt={project.title}

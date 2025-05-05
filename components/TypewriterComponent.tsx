@@ -1,4 +1,5 @@
 'use client'
+
 import Typewriter from 'typewriter-effect'
 
 type Props = {
@@ -7,7 +8,9 @@ type Props = {
 
 const TypewriterComponent = ({strings}: Props) => {
   return (
-    <div className='text-3xl md:text-4xl lg:text-5xl tracking-widest font-playfair'>
+    <div 
+      className='text-3xl md:text-4xl lg:text-5xl tracking-widest font-playfair'
+    >
       <Typewriter
         options={{
           strings: strings,
