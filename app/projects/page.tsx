@@ -1,15 +1,25 @@
 import React from 'react'
 import projects from '@/lib/content/projects'
 import ProjectCard from '@/components/ProjectCard'
+import SectionLabel from '@/components/SectionLabel'
 
 const page = () => {
   return (
-    <div className='text-white'>
-      <h2 className='text-5xl font-bold tracking-widest text-center'>My Projects</h2>
-      <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-3 my-10 p-2">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} project={project}/>
-        ))}
+    <div className='max_width pt-20 md:pt-24 '>
+      <div className='px-5 py-10'>
+        <SectionLabel
+          label="Design Meets Code"
+          title="Projects"
+        />
+
+        <section className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-10'>
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              project={project}
+            />
+          ))}
+        </section>
       </div>
     </div>
   )

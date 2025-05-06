@@ -1,13 +1,9 @@
 'use client'
 
-import React, { ReactNode } from 'react'
-import {motion} from 'framer-motion'
+import { ReactNode } from 'react'
+import { motion } from 'framer-motion'
 
-type Props = {
-  children: ReactNode
-}
-
-const Template = ({children} : Props) => {
+const template = ({ children } : { children : ReactNode}) => {
   return (
     <motion.div
       initial={{y: 20, opacity: 0}}
@@ -19,4 +15,4 @@ const Template = ({children} : Props) => {
   )
 }
 
-export default Template
+export default template

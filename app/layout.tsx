@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Playfair_Display } from 'next/font/google';
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MediaNavbar from "@/components/MediaNavbar";
-import Image from "next/image";
+import Footer from "@/components/Footer";
+
+const playfairDisplay = Playfair_Display({
+  weight: ["400"],     
+  subsets: ["latin"],      
+  variable: "--playfair-font", 
+})
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,22 +42,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative md:flex md:justify-center md:items-center h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} antialiased bg-primary_color text-secondary_color`}
       >
-        <MediaNavbar/>
-        <Image
-          src='/gridBG.jpg'
-          alt='grid-bg'
-          width={300}
-          height={300}
-          priority
-          className="brightness-50 h-full w-full fixed object-cover"
-        /> 
-        <main className="relative z-30 max-w-[1500px] md:w-[80%] mx-auto pt-20 md:pt-0">
-          <Navbar />
+        <Navbar />
+        <MediaNavbar />
+        <main className="">
           {children}
         </main>
-
+        <Footer />
       </body>
     </html>
   );

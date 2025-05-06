@@ -2,33 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.swiper-pagination-bullet {
-  background-color: white !important;
-  width: 10px !important;
-  height: 10px !important;
-}
-
-.swiper-pagination-bullet-active {
-  @apply bg-primary_green !important;
-}
-
-.custom-spin-border:before{
-  content: "";
-  background-image: conic-gradient(
-    #15803d 20deg,
-    transparent 180deg
-  );
-  position: absolute;
-  height: 150%;
-  width: 150%;
-  animation: spin-border 2s linear infinite;
-}
-
-@keyframes spin-border {
-  100%{
-    transform: rotate(-360deg);
-  }
+.max_width{
+  max-width: 1200px;
+  margin: auto;
 }
 
 @layer base {
