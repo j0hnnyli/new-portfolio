@@ -20,7 +20,7 @@ const ShowcaseContent = () => {
       >
         <div className="border border-secondary_color rounded-full flex items-center gap-2 px-2">
           <div className="h-[10px] w-[10px] rounded-full bg-third_color animate-pulse" />
-          <p className="text-sm text-secondary_color">Available for work</p>
+          <p className="text-sm text-secondary_color">Now Coding</p>
         </div>
       </motion.div>
 
