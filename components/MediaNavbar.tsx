@@ -14,10 +14,13 @@ const MediaNavbar = () => {
 
   return (
     <div className='fixed md:hidden top-0 w-full p-5 flex items-center justify-between h-20 z-50 bg-primary_color'>
-      <div className='font-bold text-lg'>
+      <Link 
+        href='/'
+        className='font-bold text-lg'
+      >
         <h2>Johnny</h2>
         <h2>Li _ </h2>
-      </div>
+      </Link>
 
       <Sheet>
         <SheetTrigger>

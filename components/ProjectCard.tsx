@@ -12,7 +12,7 @@ type Props = {
 const ProjectCard = ({ project }: Props) => {
 
   return (
-    <div className="flex flex-col lg:flex-row gap-2 group p-2 rounded-xl overflow-hidden relative">
+    <div className="flex flex-col lg:flex-row gap-2 group p-2 rounded-xl overflow-hidden relative hover:scale-105 transition-transform duration-300 ease-in-out">
       <div className="absolute inset-0 z-0 bg-secondary_color opacity-5 scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100" />
 
 
@@ -26,7 +26,7 @@ const ProjectCard = ({ project }: Props) => {
         />
       </div>
       
-      <div className="w-full lg:w-[50%] p-2 flex flex-col gap-5">
+      <div className="w-full lg:w-[50%] p-2 flex flex-col gap-5 z-10">
         <div className="flex gap-1">
           <h2 className="font-playfair text-xl">{project.title}</h2>
           <FiArrowUpRight className="text-md mt-2 group-hover:-mt-[1px] group-hover:ml-1 transition-all duration-300 ease-in-out"/>

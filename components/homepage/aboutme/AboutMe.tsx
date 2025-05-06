@@ -3,7 +3,7 @@ import SectionLabel from "../../SectionLabel";
 import AboutMeContent from "./AboutMeContent";
 
 const aboutMeParagraph1 = `
-  I'm a frontend developer with a passion for building
+  I'm a developer with a passion for building
   responsive, user-friendly web features and applications. I'm
   always eager to learn, grow, and stay current with the latest
   technologies to deliver the best possible user experiences.
