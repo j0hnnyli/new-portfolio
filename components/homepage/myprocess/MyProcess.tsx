@@ -11,7 +11,7 @@ const MyProcess = () => {
       />
 
       <MyProcessContent />
-  </section>
+    </section>
   )
 }
 
