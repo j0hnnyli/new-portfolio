@@ -1,9 +1,7 @@
+## My Profolio
 <a href="https://codingjohnny.com/">
   <img src="https://github.com/user-attachments/assets/df42b5f1-19dc-4723-b303-6ea98dede53c" alt="portfolio"></img>
 </a>
-
-## My Profolio
-Web appliation that showcases Johnny's skills and Projects
 
 ## What Under The Hood
 - Next.js  
