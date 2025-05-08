@@ -1,5 +1,5 @@
 <a href="https://codingjohnny.com/">
-  <img src="https://github.com/user-attachments/assets/df42b5f1-19dc-4723-b303-6ea98dede53c" alt="portfolio"></img>
+  <img src="https://github.com/user-attachments/assets/df42b5f1-19dc-4723-b303-6ea98dede53c" alt="portfolio" width="400"></img>
 </a>
 
 ## My Profolio
