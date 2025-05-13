@@ -1,6 +1,6 @@
 export const workWithMe = [
   {
-    title: "Vision to Interface",
+    title: "Idea → Interface",
     desc: "I transform ideas, visions or detailed designs into responsive, and interactive web applications",
   },
   {

@@ -7,8 +7,8 @@ import {
   SheetTrigger,
   SheetClose
 } from "@/components/ui/sheet"
-import Image from "next/image";
 import Link from "next/link";
+import ShowcaseAnimation from "./homepage/showcase/ShowcaseAnimation";
 
 const MediaNavbar = () => {
 
@@ -28,15 +28,7 @@ const MediaNavbar = () => {
         </SheetTrigger>
         <SheetContent className='bg-primary_color'>
           <SheetDescription></SheetDescription>
-            <div className='overflow-hidden rounded-full mt-5 w-[200px] h-[200px] mx-auto shadow-lg shadow-secondary_color'>
-              <Image 
-                src='/developer.jpg' 
-                alt='developer'
-                width={300}
-                height={500}
-                className='w-full h-full object-cover'
-              />
-            </div>
+            <ShowcaseAnimation />
           <SheetTitle className='font-bold text-xl mt-5 text-center'>
             Johnny Li _ 
           </SheetTitle>
