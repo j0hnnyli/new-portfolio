@@ -6,7 +6,7 @@ const projects : Projects[] = [
     link: "https://ascend-mu.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/ascend",
     img: "/ascend.png",
-    tags: ["NextJS", "Supabase", "Tailwind", "Responsive", "Typescript", "Framer-Motion", "Shadcn-UI"],
+    tags: ["NextJS", "Supabase", "Tailwind", "Responsive", "Typescript", "Framer-Motion", "Zustand","Shadcn-UI"],
     desc: "E-commerce webapplication with full cart functionality. Users can browse and manage products with accurate size and quantity tracking"
   },
   {
@@ -40,6 +40,14 @@ const projects : Projects[] = [
     img: "/desserts.png",
     tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "Framer-motion", "Vitest"],
     desc: "A small landing page with smooth, eye-catching section transitions that keep things engaging"
+  },
+  {
+    title: "Ball Havoc",
+    link: "https://j0hnnyli.github.io/ball-havoc/",
+    gitLink: "https://github.com/j0hnnyli/ball-havoc?tab=readme-ov-file",
+    img: "/ballhavoc.png",
+    tags: ["HTML", "CSS", "Javascript"],
+    desc: "A fun, interactive survival game. Only playable on desktop or laptop"
   },
 ]
 
