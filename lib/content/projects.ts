@@ -7,7 +7,7 @@ const projects : Projects[] = [
     gitLink: "https://github.com/j0hnnyli/ascend",
     img: "/ascend.png",
     tags: ["NextJS", "Supabase", "Tailwind", "Responsive", "Typescript", "Framer-Motion", "Zustand","Shadcn-UI"],
-    desc: "E-commerce webapplication with full cart functionality. Users can browse and manage products with accurate size and quantity tracking"
+    desc: "E-commerce web application with full cart functionality. Users can browse and manage products with accurate size and quantity tracking"
   },
   {
     title: "RecipeHub",
