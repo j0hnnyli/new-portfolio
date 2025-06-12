@@ -41,14 +41,6 @@ const projects : Projects[] = [
     tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "Framer-motion", "Vitest"],
     desc: "A small landing page with smooth, eye-catching section transitions that keep things engaging"
   },
-  {
-    title: "Ball Havoc",
-    link: "https://j0hnnyli.github.io/ball-havoc/",
-    gitLink: "https://github.com/j0hnnyli/ball-havoc?tab=readme-ov-file",
-    img: "/ballhavoc.png",
-    tags: ["HTML", "CSS", "Javascript"],
-    desc: "A fun, interactive survival game. Only playable on desktop or laptop"
-  },
 ]
 
 export default projects;
