@@ -2,20 +2,20 @@ import { Projects } from "../types/Project";
 
 const projects : Projects[] = [
   {
+    title: "InvoTracker",
+    link: "https://invoice-tracker-gamma.vercel.app/",
+    gitLink: "https://github.com/j0hnnyli/invoice-tracker",
+    img: "/invotracker.png",
+    tags: ["NextJS", "Tailwind", "Responsive", "Supabase", "Typescript", "Framer-motion", "Shadcn-UI", "Zod", "Recharts"],
+     desc: "Effortlessly create, send, and manage invoices with your InvoTracker's personal dashboard, keeping your earnings organized and smooth"
+  },
+  {
     title: "Ascend",
     link: "https://ascend-mu.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/ascend",
     img: "/ascend.png",
     tags: ["NextJS", "Supabase", "Tailwind", "Responsive", "Typescript", "Framer-Motion", "Zustand","Shadcn-UI"],
     desc: "E-commerce web application with full cart functionality. Users can browse and manage products with accurate size and quantity tracking"
-  },
-  {
-    title: "RecipeHub",
-    link: "https://recipe-chi-lilac.vercel.app/",
-    gitLink: "https://github.com/j0hnnyli/recipe",
-    img: "/recipehub.png",
-    tags: ["NextJS", "Tailwind", "Responsive", "API", "Typescript", "GSAP", "Firebase-Firestore", "Firsbase-Auth", "Shadcn-UI"],
-     desc: "Recipe platform for exploring recipes from different cultures. Users can create accounts to save favorites to a personal, cross-device recipe list accessible anytime and anywhere"
   },
   {
     title: "Anime Horizon",
