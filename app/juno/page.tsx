@@ -26,7 +26,7 @@ export default function Juno() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="w-full max-w-[800px] mt-24 mx-auto p-5 pb-36">
+      <div className="w-full max-w-[800px] mt-24 mx-auto p-5 lg:px-0 pb-36">
         {messages.map((message) => (
           <div
             key={message.id}
@@ -82,23 +82,25 @@ export default function Juno() {
           </div>
         )}
 
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleSubmit();
-          }}
-          className="fixed bottom-5 right-5 left-5 md:right-0 md:left-0 md:w-full md:max-w-[800px] md:mx-auto shadow-xl rounded-lg overflow-hidden flex items-center justify-between p-2 bg-white gap-1"
-        >
+        <div className='bg-primary_color w-full h-26 fixed bottom-0 left-0 right-0 p-5 flex items-center justify-center gap-2'>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit();
+            }}
+            className="w-full md:max-w-[800px] shadow-xl rounded-lg overflow-hidden flex items-center justify-between p-2 bg-white gap-1"
+          >
 
-          <ExpandableTextArea
-            value={input}
-            onChange={handleInputChange} 
-            onSubmit={handleSubmit}
-          />
-          <button className='w-8 h-8 bg-third_color flex items-center justify-center self-end rounded-full hover:bg-third_color/80'>
-            <FaArrowUp className='text-white text-lg' />
-          </button>
-        </form>
+            <ExpandableTextArea
+              value={input}
+              onChange={handleInputChange} 
+              onSubmit={handleSubmit}
+            />
+            <button className='w-8 h-8 bg-third_color flex items-center justify-center self-end rounded-full hover:bg-third_color/80'>
+              <FaArrowUp className='text-white text-lg' />
+            </button>
+          </form>
+        </div>
       </div>
     </motion.div>       
   );
