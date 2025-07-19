@@ -3,7 +3,7 @@
 import { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 
-const template = ({ children } : { children : ReactNode}) => {
+const AnimatePageWrapper = ({ children } : { children : ReactNode}) => {
   return (
     <motion.div
       initial={{y: 20, opacity: 0}}
@@ -15,4 +15,4 @@ const template = ({ children } : { children : ReactNode}) => {
   )
 }
 
-export default template
+export default AnimatePageWrapper

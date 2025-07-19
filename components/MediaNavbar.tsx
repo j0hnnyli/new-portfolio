@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/sheet"
 import Link from "next/link";
 import ShowcaseAnimation from "./homepage/showcase/ShowcaseAnimation";
+import ChatBoxLink from "./ChatBoxLink";
 
 const MediaNavbar = () => {
 
@@ -22,13 +23,20 @@ const MediaNavbar = () => {
         <h2>Li _ </h2>
       </Link>
 
+
+
+
       <Sheet>
         <SheetTrigger>
           <RiMenu3Fill className='text-2xl'/> 
         </SheetTrigger>
         <SheetContent className='bg-primary_color'>
           <SheetDescription></SheetDescription>
-            <ShowcaseAnimation />
+          <div className="flex items-center justify-center">
+            <ChatBoxLink />
+          </div>
+          <ShowcaseAnimation />
+
           <SheetTitle className='font-bold text-xl mt-5 text-center'>
             Johnny Li _ 
           </SheetTitle>
@@ -43,7 +51,9 @@ const MediaNavbar = () => {
             <Link href='/contact'>
               <SheetClose>Contact</SheetClose>
             </Link>
+            
           </div>
+
         </SheetContent>
       </Sheet>
     </div>
