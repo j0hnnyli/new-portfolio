@@ -30,7 +30,7 @@ const ShowcaseContent = () => {
 
       <motion.div variants={fadeIn("right", "spring", 0.6)}>
         <TypewriterComponent
-          strings={["Frontend Developer", "Anime Fan", "Fitness Enthusiast"]}
+          strings={["Web Developer", "Anime Fan", "Fitness Enthusiast"]}
         />
       </motion.div>
     </motion.div>
