@@ -82,6 +82,7 @@ export default function Juno() {
           </div>
         )}
 
+
         <div className='bg-primary_color w-full h-26 fixed bottom-0 left-0 right-0 p-5 flex items-center justify-center gap-2'>
           <form
             onSubmit={(e) => {

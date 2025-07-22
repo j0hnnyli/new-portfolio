@@ -17,6 +17,7 @@ export default function ExpandableTextArea({value, onChange, onSubmit}: Expandab
     textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
   }, [value]);
 
+  
   return (
      <textarea
       ref={textareaRef}

@@ -38,7 +38,6 @@ const AboutMeContent = ({aboutMeParagraph1, aboutMeParagraph2} : Props) => {
         className="mt-5 text-xl"
       >
         <p className="mb-2">Wanna know more about me?</p>
-
         <Link
           href="/juno"
           className="group flex items-center gap-2 py-3 px-5 rounded-lg border-2 border-secondary_color w-[230px] hover:border-third_color transition-colors duration-300 ease-in-out"
