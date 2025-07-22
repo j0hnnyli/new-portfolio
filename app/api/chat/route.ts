@@ -1,5 +1,5 @@
 import { openai } from '@ai-sdk/openai';
-import { embed, streamText } from 'ai';
+import { streamText } from 'ai';
 import { systemContent } from './junoSystemContent';
 
 export const maxDuration = 30;
