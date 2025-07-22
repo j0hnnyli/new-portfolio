@@ -60,7 +60,6 @@ const AboutMeContent = ({aboutMeParagraph1, aboutMeParagraph2} : Props) => {
           <p className=" hidden group-hover:inline">Hi, Let&apos;s Chat!</p>
         </Link>
       </motion.div>
-
     </motion.div>
   )
 }
