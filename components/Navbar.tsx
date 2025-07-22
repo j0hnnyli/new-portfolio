@@ -1,6 +1,5 @@
 import React from 'react'
 import NavLink from './NavLink'
-import ChatBoxLink from './ChatBoxLink'
 
 const Navbar = () => {
   return (
@@ -15,7 +14,6 @@ const Navbar = () => {
           <NavLink name='Home' href='/'/>
           <NavLink name='Projects' href='/projects'/>
           <NavLink name='Contact' href='/contact'/>
-          <ChatBoxLink />
         </div>
       </nav>
     </div>
