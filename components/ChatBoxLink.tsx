@@ -5,8 +5,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";
+import { SheetClose } from "./ui/sheet";
 
-export default function ChatBoxLink() {
+type ChatBoxLinkProps = {
+  isMobile?: boolean;
+}
+
+export default function ChatBoxLink({ isMobile } : ChatBoxLinkProps) {
   const pathname = usePathname();
   const [show, setShow] = useState<boolean>(false);
   
@@ -60,7 +65,7 @@ export default function ChatBoxLink() {
             onClick={() => setShow(false)}
             className="bg-secondary_color text-white px-4 py-2 rounded-lg hover:bg-third_color transition-colors duration-300 "
           >
-            Let&apos;s Chat
+            {isMobile ? (<SheetClose>Let&apos;s Chat</SheetClose>) : "Let's Chat"}
           </Link>
         </div>
       )}

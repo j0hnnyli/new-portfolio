@@ -23,9 +23,6 @@ const MediaNavbar = () => {
         <h2>Li _ </h2>
       </Link>
 
-
-
-
       <Sheet>
         <SheetTrigger>
           <RiMenu3Fill className='text-2xl'/> 
@@ -33,7 +30,7 @@ const MediaNavbar = () => {
         <SheetContent className='bg-primary_color'>
           <SheetDescription></SheetDescription>
           <div className="flex items-center justify-center">
-            <ChatBoxLink />
+            <ChatBoxLink isMobile={true} />
           </div>
           <ShowcaseAnimation />
 
