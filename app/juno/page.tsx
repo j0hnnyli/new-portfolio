@@ -7,8 +7,10 @@ import { twMerge } from 'tailwind-merge';
 import { FaArrowUp } from "react-icons/fa";
 import ExpandableTextArea from './ExpandableTextArea';
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 export default function Juno() {
+  const chatEndRef = useRef<HTMLDivElement>(null);
   const { messages, input, handleInputChange, handleSubmit, status } = useChat({
     api: '/api/chat',
     initialMessages: [
@@ -19,6 +21,18 @@ export default function Juno() {
       },
     ]
   });
+
+  const scrollToBottom = () => {
+    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleSubmitScroll = () => {
+    handleSubmit();
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   return (
     <motion.div
@@ -48,13 +62,13 @@ export default function Juno() {
               )}
             </div>
 
-            {message.parts.map((part) => {
+            {message.parts.map((part, i) => {
               if (part.type === 'text') {
                 return (
                   <div
-                    key={message.id}
+                    key={`${message.id}-part-${i}`}
                     className={twMerge(
-                      'max-w-[75%] p-2 text-md text-primary_color rounded-lg',
+                      'md:max-w-[75%] p-2 text-md text-primary_color rounded-lg w-fit',
                       message.role === 'user'
                         ? 'bg-third_color text-white'
                         : 'bg-secondary_color/70'
@@ -82,16 +96,16 @@ export default function Juno() {
           </div>
         )}
 
+        <div ref={chatEndRef} />
 
-        <div className='bg-primary_color w-full h-26 fixed bottom-0 left-0 right-0 p-5 flex items-center justify-center gap-2'>
+        <div className='bg-primary_color w-full h-26 fixed bottom-0 left-0 right-0 p-5 flex flex-col items-center justify-center gap-2 md:max-w-[800px] mx-auto'>
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              handleSubmit();
+              handleSubmitScroll();
             }}
-            className="w-full md:max-w-[800px] shadow-xl rounded-lg overflow-hidden flex items-center justify-between p-2 bg-white gap-1"
+            className="w-full shadow-xl rounded-lg overflow-hidden flex items-center justify-between p-2 bg-white gap-1"
           >
-
             <ExpandableTextArea
               value={input}
               onChange={handleInputChange} 
