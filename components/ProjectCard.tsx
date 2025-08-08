@@ -46,12 +46,18 @@ const ProjectCard = ({ project }: Props) => {
         </div>
 
         <div className="flex items-center gap-5">
-          <Link href={project.gitLink} target='_blank'>
-            <FaGithub className="text-xl cursor-pointer hover:text-third_color"/>
+          <Link href={project.gitLink} target='_blank' className="flex items-center gap-1  hover:text-third_color">
+            <FaGithub className="text-xl cursor-pointer"/>
+            <span className="text-sm">
+              GitHub
+            </span>
           </Link>
 
-          <Link href={project.link} target='_blank'>
-            <FiExternalLink className="text-xl cursor-pointer hover:text-third_color"/>
+          <Link href={project.link} target='_blank' className="flex items-center gap-1  hover:text-third_color">
+            <FiExternalLink className="text-xl cursor-pointer"/>
+            <span className="text-sm">
+              Demo
+            </span>
           </Link>
         </div>
       </div>
