@@ -15,8 +15,8 @@ const paths = {
 const overlayVariants = {
   initial: {
     top: "100% + 200px",
-    borderTopLeftRadius: "90%",
-    borderTopRightRadius: "90%",
+    borderTopLeftRadius: "300px",
+    borderTopRightRadius: "300px",
   },
   animate: {
     top: '-200px',
