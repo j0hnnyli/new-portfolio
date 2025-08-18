@@ -4,7 +4,6 @@ import { Playfair_Display } from 'next/font/google';
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MediaNavbar from "@/components/MediaNavbar";
-import Footer from "@/components/Footer";
 
 const playfairDisplay = Playfair_Display({
   weight: ["400"],     
@@ -49,7 +48,6 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );
