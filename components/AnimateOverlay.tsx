@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const paths = {
   "/": "Home",
@@ -14,9 +14,9 @@ const paths = {
 
 const overlayVariants = {
   initial: {
-    top: "100% + 200px",
-    borderTopLeftRadius: "200px",
-    borderTopRightRadius: "200px",
+    top: "calc(100% + 100px)",
+    borderTopLeftRadius: "100%",
+    borderTopRightRadius: "100%",
   },
   animate: {
     top: '-200px',
@@ -25,10 +25,10 @@ const overlayVariants = {
     transition: {
       duration: 0.8,
       ease: [0.22, 1, 0.36, 1],
-    },
+    }
   },
   exit: {
-    top: "-150%",
+    top: "-150%" ,
     borderBottomLeftRadius: "100%",
     borderBottomRightRadius: "100%",
     transition: {
@@ -40,26 +40,20 @@ const overlayVariants = {
 
 export default function AnimateOverlay() {
   const pathname = usePathname();
-  const [showOverlay, setShowOverlay] = useState(false);
-  
-  useEffect(() => {
-    setShowOverlay(true);
-    const timer = setTimeout(() => {
-      setShowOverlay(false);
-    }, 800);
-    
-    return () => clearTimeout(timer);
-  }, [pathname]);
+  const [showOverlay, setShowOverlay] = useState(true);
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" >
       {showOverlay && (
         <motion.div
-          key={pathname + "-motion-overlay"}
+          key={pathname}
           variants={overlayVariants}
           initial="initial"
           animate="animate"
           exit="exit"
+          onAnimationComplete={() => {
+            setShowOverlay(false);
+          }}
           className="fixed top-0 left-0 w-full h-[calc(100vh+200px)] bg-secondary_color z-[100] pointer-events-none flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center  h-screen w-full mt-[200px]">
