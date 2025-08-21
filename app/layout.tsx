@@ -25,12 +25,6 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Johnny's Portfolio",
   description: "Highlights of Johnny's Skills and Personal Projects",
-  icons: {
-    icon: ['/favicon/favicon.ico'],
-    apple: ['/favicon/apple-touch-icon.png'],
-    shortcut: ['/favicon/favicon-32x32.png'],
-  },
-  manifest: '/favicon/site.webmanifest'
 };
 
 export default function RootLayout({

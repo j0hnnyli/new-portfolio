@@ -20,9 +20,8 @@ const ProjectCard = ({ project }: Props) => {
         <Image 
           src={project.img}
           alt={project.title}
-          width={400}
-          height={250}
-          className="w-full h-full"
+          fill
+          priority
         />
       </div>
       
