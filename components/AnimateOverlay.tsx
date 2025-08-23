@@ -1,9 +1,7 @@
-'use client'
+"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
 const paths = {
   "/": "Home",
@@ -19,16 +17,16 @@ const overlayVariants = {
     borderTopRightRadius: "100%",
   },
   animate: {
-    top: '-200px',
+    top: "-200px",
     borderTopLeftRadius: "0",
     borderTopRightRadius: "0",
     transition: {
       duration: 0.8,
       ease: [0.25, 1, 0.5, 1],
-    }
+    },
   },
   exit: {
-    top: "-150%" ,
+    top: "calc(-100% - 300px)",
     borderBottomLeftRadius: "100%",
     borderBottomRightRadius: "100%",
     transition: {
@@ -40,44 +38,43 @@ const overlayVariants = {
 };
 
 const contentVariants = {
-  initial : { y : 40, opacity : 0 },
-  animate : {
-    y : 0,
-    opacity : 1,
-    transition : {
-      duration : 0.8,
-      ease : [0.25, 1, 0.5, 1]
+  initial: { y: 40, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 1, 0.5, 1],
     },
   },
-  exit : {
-    y : '-100%',
-    opacity : 0,
-    transition : {
-      duration : 0.8,
-      ease : [0.22, 1, 0.5, 1]
-    }
-  }
-}
+  exit: {
+    y: "-100%",
+    opacity: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.5, 1],
+    },
+  },
+};
 
-let isFirstRender = true;
+type AnimateOverlayProps = {
+  showOverlay: boolean;
+  showContent: boolean;
+  setShowOverlay: (bool: boolean) => void;
+  setShowContent: (bool: boolean) => void;
+  pathname: string;
+};
 
-export default function AnimateOverlay() {
-  const pathname = usePathname();
-  const [showOverlay, setShowOverlay] = useState(false);
-  const [showContent, setShowContent] = useState(false);
-  
-  useEffect(() => {
-    if (isFirstRender) {
-      isFirstRender = false
-      return;
-    }
-
-    setShowOverlay(true);
-    setShowContent(true);
-  }, []);
+export default function AnimateOverlay({
+  showOverlay,
+  showContent,
+  setShowContent,
+  setShowOverlay,
+  pathname,
+}: AnimateOverlayProps) {
 
   return (
-    <AnimatePresence mode="wait" >
+    <AnimatePresence mode="wait">
       {showOverlay && (
         <motion.div
           key={pathname}
@@ -91,7 +88,7 @@ export default function AnimateOverlay() {
           className="fixed top-0 left-0 w-full h-[calc(100vh+200px)] bg-secondary_color z-[100] pointer-events-none flex items-center justify-center"
         >
           {showContent && (
-            <motion.div 
+            <motion.div
               variants={contentVariants}
               initial="initial"
               animate="animate"
@@ -113,7 +110,7 @@ export default function AnimateOverlay() {
               )}
 
               <div className="flex items-center gap-5 w-full justify-center">
-                <div className="w-3 h-3 bg-primary_color rounded-full"/>
+                <div className="w-3 h-3 bg-primary_color rounded-full" />
                 <p className="text-primary_color text-5xl font-bold font-playfair tracking-widest">
                   {paths[pathname as keyof typeof paths]}
                 </p>
