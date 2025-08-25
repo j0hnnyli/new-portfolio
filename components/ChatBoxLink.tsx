@@ -1,11 +1,11 @@
 'use client';
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 import { SheetClose } from "./ui/sheet";
+import { NavLinkWrapper } from "./NavLink";
 
 type ChatBoxLinkProps = {
   isMobile?: boolean;
@@ -25,7 +25,7 @@ export default function ChatBoxLink({ isMobile } : ChatBoxLinkProps) {
         className="text-white flex items-center justify-center relative"
       >
         <div className={twMerge(
-            "absolute w-[22px] h-[22px] bg-secondary_color rounded-full animate-ping group-hover:animate-none",
+            "absolute w-[22px] h-[22px] bg-third_color rounded-full animate-ping group-hover:animate-none",
             pathname === '/juno' && "animate-none"
           )}
         />
@@ -60,13 +60,12 @@ export default function ChatBoxLink({ isMobile } : ChatBoxLinkProps) {
             </p>
           </div>
 
-          <Link
+          <NavLinkWrapper
             href="/juno"
-            onClick={() => setShow(false)}
             className="bg-secondary_color text-white px-4 py-2 rounded-lg hover:bg-third_color transition-colors duration-300 "
           >
             {isMobile ? (<SheetClose>Let&apos;s Chat</SheetClose>) : "Let's Chat"}
-          </Link>
+          </NavLinkWrapper>
         </div>
       )}
     </div>
