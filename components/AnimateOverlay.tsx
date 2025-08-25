@@ -80,8 +80,10 @@ export default function AnimateOverlay({
           initial="initial"
           animate="animate"
           exit="exit"
-          onAnimationComplete={() => {
-            setShowOverlay(false);
+          onAnimationComplete={(definition) => {
+            if (definition === "animate") {
+              setShowOverlay(false);
+            }
           }}
           className="fixed top-0 left-0 w-full h-[calc(100vh+200px)] bg-secondary_color z-[100] pointer-events-none flex items-center justify-center"
         >

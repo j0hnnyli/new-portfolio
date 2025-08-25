@@ -28,13 +28,21 @@ export default function NavLink({ name, href } : Props){
   )
 }
 
-export function NavLinkWrapper({ children, href, className } : { children : ReactNode, href : string, className ?: string}){
+type NavLinkWrapperProps = {
+  children : ReactNode, 
+  href : string, 
+  className ?: string
+  onClick? : () => void;
+}
+
+export function NavLinkWrapper({ children, href, className, onClick } : NavLinkWrapperProps){
   const { startTransition } = usePageTransition();
   return (
     <Link 
     href={href} 
     onClick={(e) => {
         e.preventDefault();
+        onClick?.();
         startTransition(href);
       }}
       className={twMerge('cursor-pointer', className)}
