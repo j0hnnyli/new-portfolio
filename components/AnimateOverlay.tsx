@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
 const paths = {
   "/": "Home",
@@ -12,12 +13,12 @@ const paths = {
 
 const overlayVariants = {
   initial: {
-    top: "calc(100% + 100px)",
+    y: "calc(100vh + 100px)",
     borderTopLeftRadius: "100%",
     borderTopRightRadius: "100%",
   },
   animate: {
-    top: "-200px",
+    y: "-200px",
     borderTopLeftRadius: "0",
     borderTopRightRadius: "0",
     transition: {
@@ -26,7 +27,7 @@ const overlayVariants = {
     },
   },
   exit: {
-    top: "calc(-100% - 300px)",
+    y: "calc(-100vh - 200px)",
     borderBottomLeftRadius: "100%",
     borderBottomRightRadius: "100%",
     transition: {
@@ -45,33 +46,30 @@ const contentVariants = {
     transition: {
       duration: 0.8,
       ease: [0.25, 1, 0.5, 1],
-    },
+    }
   },
-  exit: {
+  exit : {
     y: "-100%",
     opacity: 0,
     transition: {
       duration: 0.8,
-      ease: [0.22, 1, 0.5, 1],
-    },
-  },
+      ease: [0.25, 1, 0.5, 1],
+    }
+  }
 };
 
 type AnimateOverlayProps = {
   showOverlay: boolean;
-  showContent: boolean;
   setShowOverlay: (bool: boolean) => void;
-  setShowContent: (bool: boolean) => void;
   pathname: string;
 };
 
 export default function AnimateOverlay({
   showOverlay,
-  showContent,
-  setShowContent,
   setShowOverlay,
   pathname,
 }: AnimateOverlayProps) {
+  const [showPath, setShowPath] = useState(true);
 
   return (
     <AnimatePresence mode="wait">
@@ -87,14 +85,14 @@ export default function AnimateOverlay({
           }}
           className="fixed top-0 left-0 w-full h-[calc(100vh+200px)] bg-secondary_color z-[100] pointer-events-none flex items-center justify-center"
         >
-          {showContent && (
+          {showPath && (
             <motion.div
               variants={contentVariants}
               initial="initial"
               animate="animate"
               exit="exit"
-              onAnimationComplete={() => {
-                setShowContent(false);
+              onAnimationEnd={() => {
+                setShowPath(false)
               }}
               className="flex flex-col items-center justify-center  h-screen w-full mt-[200px]"
             >
