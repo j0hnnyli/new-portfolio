@@ -26,13 +26,13 @@ export default function Juno() {
   };
 
   useEffect(() => {
-    if(messages.length >= 2){
+    if (messages.length >= 2) {
       scrollToBottom();
     }
   }, [messages]);
 
   return (
-    <div className="w-full max-w-[800px] mt-20 mx-auto p-5 lg:px-0 pb-36 h-[calc(100vh-80px)] overflow-y-auto scroolbar-none">
+    <div className="w-full max-w-[800px] mt-20 mx-auto p-5 lg:px-0 pb-36 h-[calc(100vh-80px)]">
       {messages.map((message) => (
         <div
           key={message.id}

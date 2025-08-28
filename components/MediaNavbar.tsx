@@ -7,22 +7,23 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import Link from "next/link";
 import ShowcaseAnimation from "./homepage/showcase/ShowcaseAnimation";
 import ChatBoxLink from "./ChatBoxLink";
+import { NavLinkWrapper } from "./NavLink";
 
 const MediaNavbar = () => {
   return (
     <div className="fixed md:hidden top-0 w-full p-5 flex items-center justify-between h-20 z-50 bg-primary_color">
-      <Link href="/" className="font-bold text-lg">
+      <NavLinkWrapper href="/" className="font-bold text-lg">
         <h2>Johnny</h2>
         <h2>Li _ </h2>
-      </Link>
+      </NavLinkWrapper>
 
       <Sheet>
         <SheetTrigger>
           <RiMenu3Fill className="text-2xl" />
         </SheetTrigger>
+
         <SheetContent className="bg-primary_color">
           <SheetDescription></SheetDescription>
           <div className="flex items-center justify-center">
@@ -35,15 +36,15 @@ const MediaNavbar = () => {
           </SheetTitle>
 
           <div className="mt-5 flex flex-col items-center justify-center gap-3 text-xl">
-            <Link href="/">
+            <NavLinkWrapper href="/">
               <SheetClose>Home</SheetClose>
-            </Link>
-            <Link href="/projects">
+            </NavLinkWrapper>
+            <NavLinkWrapper href="/projects">
               <SheetClose>Projects</SheetClose>
-            </Link>
-            <Link href="/contact">
+            </NavLinkWrapper>
+            <NavLinkWrapper href="/contact">
               <SheetClose>Contact</SheetClose>
-            </Link>
+            </NavLinkWrapper>
           </div>
         </SheetContent>
       </Sheet>

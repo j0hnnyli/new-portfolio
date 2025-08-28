@@ -4,6 +4,7 @@ import { Playfair_Display } from 'next/font/google';
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MediaNavbar from "@/components/MediaNavbar";
+import { PageTransitionProvider } from "@/components/context/PageTransitionContext";
 
 const playfairDisplay = Playfair_Display({
   weight: ["400"],     
@@ -36,12 +37,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} antialiased bg-primary_color text-secondary_color`}
-      >
-        <Navbar />
-        <MediaNavbar />
-        <main>
-          {children}
-        </main>
+        >
+        <PageTransitionProvider>
+          <Navbar />
+          <MediaNavbar />
+          <main>
+            {children}
+          </main>
+        </PageTransitionProvider>
       </body>
     </html>
   );

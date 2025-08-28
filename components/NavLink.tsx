@@ -1,17 +1,25 @@
 'use client'
 
 import Link from 'next/link';
+import { usePageTransition } from './context/PageTransitionContext'; 
+import { ReactNode } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 type Props = {
   name : string;
   href : string;
 }
 
-function NavLink({ name, href } : Props){
+export default function NavLink({ name, href } : Props){
+  const { startTransition } = usePageTransition();
 
   return (
     <Link 
       href={href} 
+      onClick={(e) => {
+        e.preventDefault();
+        startTransition(href);
+      }}
       className='group relative cursor-pointer'
     >
       {name}
@@ -19,4 +27,27 @@ function NavLink({ name, href } : Props){
     </Link>
   )
 }
-export default NavLink
+
+type NavLinkWrapperProps = {
+  children : ReactNode, 
+  href : string, 
+  className ?: string
+  onClick? : () => void;
+}
+
+export function NavLinkWrapper({ children, href, className, onClick } : NavLinkWrapperProps){
+  const { startTransition } = usePageTransition();
+  return (
+    <Link 
+    href={href} 
+    onClick={(e) => {
+        e.preventDefault();
+        onClick?.();
+        startTransition(href);
+      }}
+      className={twMerge('cursor-pointer', className)}
+    >
+      {children}
+    </Link>
+  )
+}

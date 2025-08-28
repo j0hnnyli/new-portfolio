@@ -1,56 +1,35 @@
 'use client'
 
-import AnimateOverlay from "@/components/AnimateOverlay";
+import { usePageTransition } from "@/components/context/PageTransitionContext";
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 
-let isFirstRender = true;
-
-const AnimatePageTransition = ({ children }: { children: ReactNode }) => {
-  const pathname = usePathname();
-  const [showOverlay, setShowOverlay] = useState(isFirstRender ? false : true);
-  const [showContent, setShowContent] = useState(isFirstRender ? false : true);
-  
-  useEffect(() => {
-    if (isFirstRender) {
-      isFirstRender = false
-      return;
-    }
-  }, []);
-
-  const pageVariants = {
-    initial: { opacity: 0, y: 30 },
-    animate: { 
-      opacity: 1, 
-      y: 0,
-      transition : { 
-        duration: 0.6, 
-        delay: isFirstRender ? 0 : 0.8,
-        ease: 'easeIn' 
-      },
+const pageVariants = {
+  initial: { opacity: 0, y: 30 },
+  animate: (popState : boolean) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      delay: popState ? 1 : 0,
+      ease: 'easeIn',
     },
-  }
+  }),
+};
+
+const AnimatePage = ({ children }: { children: ReactNode }) => {
+  const { isPopState } = usePageTransition()
 
   return (
-    <>
-      <AnimateOverlay 
-        showOverlay={showOverlay}
-        showContent={showContent}
-        setShowOverlay={setShowOverlay}
-        setShowContent={setShowContent}
-        pathname={pathname}
-      />
-      <motion.div
-        variants={pageVariants}
-        initial="initial"
-        animate="animate"
-        custom={isFirstRender}
-      >
-        {children}
-      </motion.div>
-    </>
+    <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      custom={isPopState}
+    >
+      {children}
+    </motion.div>
   )
 }
 
-export default AnimatePageTransition
+export default AnimatePage;
