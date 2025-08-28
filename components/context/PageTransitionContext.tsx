@@ -8,59 +8,67 @@ import { usePathname } from 'next/navigation';
 type PageTransitionContextType = {
   startTransition: (href: string) => void;
   showOverlay: boolean;
-  nexthref : string;
-  isPopState : boolean;
+  nexthref: string;
+  isPopState: boolean;
 };
 
 const PageTransitionContext = createContext<PageTransitionContextType | null>(null);
 
-
 export const PageTransitionProvider = ({ children }: { children: ReactNode }) => {
-  const [showOverlay, setShowOverlay] = useState(false);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const [isPopState, setIsPopState] = useState(false);
-  const [nexthref, setNextHref] = useState('');
-
-  const router = useRouter();
   const pathname = usePathname();
+  const router = useRouter();
 
-  const activeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [isPopState, setIsPopState] = useState(false);
+  const [nexthref, setNextHref] = useState("");
+  const [showOverlay, setShowOverlay] = useState(false); 
+
+  const isExiting = useRef(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const startTransition = (href: string) => {
-    if (pathname === href || isTransitioning) return;
-    
-    setIsTransitioning(true); 
-    if (activeTimeoutRef.current) {
-      clearTimeout(activeTimeoutRef.current);
-      activeTimeoutRef.current = null;
-    }
-    
-    setNextHref(href);
+    if (pathname === href || isExiting.current) return;
+
+    isExiting.current = true;
     setIsPopState(false);
+    setNextHref(href);
     setShowOverlay(true);
 
-    activeTimeoutRef.current = setTimeout(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+    timeoutRef.current = setTimeout(() => {
       router.push(href);
-      activeTimeoutRef.current = null;
-      setIsTransitioning(false); 
-    }, 800);
+      setShowOverlay(false);
+      timeoutRef.current = null;
+    }, 1000);
   };
 
   useEffect(() => {
     const handlePopState = () => {
-      const currentHref = window.location.pathname;
-      
-      setIsPopState(true);
-      setNextHref(currentHref);
+      if(isExiting.current) return;
+      const newPath = window.location.pathname;
+
+      isExiting.current = false; 
+
       setShowOverlay(true);
+      setNextHref(newPath);
+      setIsPopState(true);
+
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+      timeoutRef.current = setTimeout(() => {
+        setShowOverlay(false);
+        timeoutRef.current = null;
+        isExiting.current = true;
+      }, 1000);
     };
 
     window.addEventListener('popstate', handlePopState);
-
     return () => {
       window.removeEventListener('popstate', handlePopState);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, [showOverlay, isPopState]);
+  }, []);
+
 
   return (
     <PageTransitionContext.Provider
@@ -74,8 +82,10 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
       {children}
       <AnimateOverlay
         showOverlay={showOverlay}
-        setShowOverlay={setShowOverlay}
         pathname={nexthref}
+        onExitComplete={() => {
+          isExiting.current = false;
+        }}
       />
     </PageTransitionContext.Provider>
   );

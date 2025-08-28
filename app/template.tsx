@@ -11,7 +11,7 @@ const pageVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      delay: popState ? 0.8 : 0,
+      delay: popState ? 1 : 0,
       ease: 'easeIn',
     },
   }),

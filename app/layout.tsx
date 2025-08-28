@@ -4,7 +4,6 @@ import { Playfair_Display } from 'next/font/google';
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MediaNavbar from "@/components/MediaNavbar";
-// import PageTransitionProviderWrapper from "./PageTransitionProviderWrapper";
 import { PageTransitionProvider } from "@/components/context/PageTransitionContext";
 
 const playfairDisplay = Playfair_Display({
