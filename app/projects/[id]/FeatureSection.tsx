@@ -43,7 +43,6 @@ export default function FeatureSection( { features } : FeatureSectionProps) {
           ))}
         </motion.div>  
       </div>
-
     </div>
   );
 }
