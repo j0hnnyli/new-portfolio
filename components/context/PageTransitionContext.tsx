@@ -69,7 +69,6 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
     };
   }, []);
 
-
   return (
     <PageTransitionContext.Provider
       value={{

@@ -4,8 +4,8 @@ import { workWithMe } from "@/lib/content/workwithme";
 
 const WhyWorkWithMe = () => {
   return (
-    <section className="py-10 bg-secondary_color px-5 relative">
-      <div className="max_width">
+    <section className="py-10 bg-secondary_color relative">
+      <div className="max_width px-5">
         <SectionLabel
           color="primary_color"
           label="Why Choose Me"

@@ -9,6 +9,11 @@ const paths = {
   "/projects": "Projects",
   "/contact": "Contact",
   "/juno": "Juno",
+  "/projects/1": "InvoTracker",
+  "/projects/2": "Ascend",
+  "/projects/3": "Anime Horizon",
+  "/projects/4": "Quizes",
+  "/projects/5": "Desserts",
 };
 
 const overlayVariants = {
@@ -37,12 +42,12 @@ const overlayVariants = {
       },
       borderBottomLeftRadius: {
         delay: 0.25,
-        duration: 0.4,
+        duration: 0.35,
         ease: 'easeOut',
       },
       borderBottomRightRadius: {
         delay: 0.25,
-        duration: 0.4,
+        duration: 0.35,
         ease: 'easeOut',
       },
     },

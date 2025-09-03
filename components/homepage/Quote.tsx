@@ -17,20 +17,22 @@ const Quote = () => {
         className="max_width"
       >
         <motion.h2 
-          variants={fadeIn('up', 'spring', 0.6)}
+          variants={fadeIn('up', 'spring')}
           className="text-2xl italic font-playfair mb-3"
         >
-          “A good process builds great products”
+          <q>
+            A good process builds great products
+          </q>
         </motion.h2>
         <motion.p 
-          variants={fadeIn('up', 'spring', 0.6)}
+          variants={fadeIn('up', 'spring')}
           className="text-sm"
         >
           Here&apos;s how I combine structure and creativity together in my
           workflow.
         </motion.p>
 
-        <motion.div variants={fadeIn('up', 'spring', 0.6)}>
+        <motion.div variants={fadeIn('up', 'spring')}>
           <FaChevronDown className="mx-auto text-2xl mt-5 animate-bounce" />
         </motion.div>
       </motion.div>

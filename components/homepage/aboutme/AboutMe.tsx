@@ -18,8 +18,8 @@ const aboutMeParagraph2 = `
 
 const AboutMe = () => {
   return (
-    <section className="py-10 px-5">
-      <div className="max_width flex flex-col md:flex-row justify-between gap-5">
+    <section className="py-10">
+      <div className="max_width flex flex-col md:flex-row justify-between gap-5 px-5">
         <SectionLabel label="About Me" title="Get to Know Me" />
 
         <AboutMeContent
