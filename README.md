@@ -1,6 +1,6 @@
 ## My Profolio
 <a href="https://codingjohnny.com/">
-  <img src="[https://github.com/user-attachments/assets/f0de765e-7658-4a44-9634-571c3a04ddeb](https://github.com/user-attachments/assets/3b9cae42-c745-4a96-8c18-c84d70600ca1)" alt="portfolio"></img>
+  <img src="https://github.com/user-attachments/assets/3b9cae42-c745-4a96-8c18-c84d70600ca1" alt="portfolio"></img>
 </a>
 
 ## What Under The Hood
