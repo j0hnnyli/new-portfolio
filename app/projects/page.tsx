@@ -2,30 +2,21 @@ import React from 'react'
 import projects from '@/lib/content/projects'
 import ProjectCard from '@/components/ProjectCard'
 import Footer from '@/components/Footer'
+import SectionLabel from '@/components/SectionLabel'
 
 const page = () => {
   return (
     <>
-      <div className='max_width pt-20 md:pt-24 '>
-        <div className='px-5 py-10'>
-          <div 
-            className="flex flex-col items-start"
+      <div className='mt-24'>
+        <div className='px-5 py-10 max_width'>
+          <SectionLabel 
+            label="Design Meets Code" 
+            title="Projects" 
+          />
+
+          <section 
+            className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-10'
           >
-            <div 
-              className='border border-secondary_color rounded-full flex items-center gap-2 px-2'
-            >
-              <div className="h-[10px] w-[10px] rounded-full bg-third_color animate-pulse"/>
-              <p className='text-sm text-secondary_color'>Design Meets Code</p>
-            </div>
-
-            <h2 
-              className='text-secondary_color font-playfair italic text-4xl font-bold'
-            >
-              Projects
-            </h2>
-          </div>
-
-          <section className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-10'>
             {projects.map((project) => (
               <ProjectCard
                 key={project.title}

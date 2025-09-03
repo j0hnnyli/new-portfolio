@@ -1,12 +1,15 @@
 'use client'
 
-import { fadeIn, staggerContainer } from '@/lib/motions'
-import { motion } from 'framer-motion'
-import { myProcess } from '@/lib/content/myprocess'
-import { twMerge } from 'tailwind-merge'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeIn, staggerContainer } from '@/lib/motions';
+import { twMerge } from 'tailwind-merge';
 
+type ProcessSectionProps = {
+  myProcess : {title : string, desc : string}[]
+}
 
-const MyProcessContent = () => {
+export default function ProcessSection({ myProcess }: ProcessSectionProps) {
   return (
     <motion.div 
       variants={staggerContainer(0.2, 0.2)}
@@ -28,7 +31,5 @@ const MyProcessContent = () => {
         </motion.div>
       ))}
     </motion.div>
-  )
+  );
 }
-
-export default MyProcessContent

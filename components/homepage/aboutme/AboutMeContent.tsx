@@ -21,21 +21,21 @@ const AboutMeContent = ({aboutMeParagraph1, aboutMeParagraph2} : Props) => {
       className="w-full md:w-[50%]"
     >
       <motion.p 
-        variants={fadeIn('up', 'spring', 0.6)}
+        variants={fadeIn('up', 'spring')}
         className="text-xl"
       >
         {aboutMeParagraph1}
       </motion.p>
 
       <motion.p 
-        variants={fadeIn('up', 'spring', 0.6)}
+        variants={fadeIn('up', 'spring')}
         className="text-xl mt-5"
       >
         {aboutMeParagraph2}
       </motion.p>
 
       <motion.div 
-        variants={fadeIn('up', 'spring', 0.6)}
+        variants={fadeIn('up', 'spring')}
         className="mt-5 text-xl"
       >
         <p className="mb-2">Wanna know more about me?</p>

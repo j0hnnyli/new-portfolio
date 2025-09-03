@@ -2,7 +2,7 @@ import { Variants } from "framer-motion";
 
 export const staggerContainer = (
   staggerChildren: number,
-  delayChildren: number
+  delayChildren: number,
 ): Variants => ({
   hidden: {},
   show: {
@@ -16,7 +16,7 @@ export const staggerContainer = (
 export const fadeIn = (
   direction: string,
   type: string,
-  duration: number
+  // duration: number
 ) => ({
   hidden: {
     x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
@@ -29,7 +29,7 @@ export const fadeIn = (
     opacity: 1,
     transition: {
       type,
-      duration,
+      // duration,
       ease: "easeOut",
     },
   },

@@ -15,7 +15,7 @@ const ShowcaseContent = () => {
       className="w-full text-5xl md:text-6xl lg:text-7xl flex flex-col gap-5"
     >
       <motion.div
-        variants={fadeIn("down", "spring", 0.6)}
+        variants={fadeIn("down", "spring")}
         className="flex flex-col items-start"
       >
         <div className="border border-secondary_color rounded-full flex items-center gap-2 px-2">
@@ -24,11 +24,11 @@ const ShowcaseContent = () => {
         </div>
       </motion.div>
 
-      <motion.div variants={fadeIn("right", "spring", 0.6)}>
+      <motion.div variants={fadeIn("up", "spring")}>
         <h2 className="font-bold">Hi, I&apos;m Johnny</h2>
       </motion.div>
 
-      <motion.div variants={fadeIn("right", "spring", 0.6)}>
+      <motion.div variants={fadeIn("up", "spring")}>
         <TypewriterComponent
           strings={["Full Stack Developer", "Anime Fan", "Fitness Enthusiast"]}
         />

@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 type PageTransitionContextType = {
   startTransition: (href: string) => void;
   showOverlay: boolean;
+  setShowOverlay : (bool : boolean) => void;
   nexthref: string;
   isPopState: boolean;
 };
@@ -37,7 +38,6 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
 
     timeoutRef.current = setTimeout(() => {
       router.push(href);
-      setShowOverlay(false);
       timeoutRef.current = null;
     }, 1000);
   };
@@ -69,7 +69,6 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
     };
   }, []);
 
-
   return (
     <PageTransitionContext.Provider
       value={{
@@ -77,6 +76,7 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
         showOverlay,
         nexthref,
         isPopState,
+        setShowOverlay
       }}
     >
       {children}

@@ -24,7 +24,7 @@ const SectionLabel = ({
       className="flex flex-col items-start"
     >
       <motion.div 
-        variants={fadeIn('down', 'spring', 0.6)}
+        variants={fadeIn('down', 'spring')}
         className={`border border-${color} rounded-full flex items-center gap-2 px-2`}
       >
         <div className="h-[10px] w-[10px] rounded-full bg-third_color animate-pulse"/>
@@ -32,7 +32,7 @@ const SectionLabel = ({
       </motion.div>
 
       <motion.h2 
-        variants={fadeIn('right', 'spring', 0.6)}
+        variants={fadeIn('right', 'spring')}
         className={`text-${color} font-playfair italic text-4xl font-bold`}
       >
         {title}
