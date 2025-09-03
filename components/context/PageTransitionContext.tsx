@@ -38,9 +38,8 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
 
     timeoutRef.current = setTimeout(() => {
       router.push(href);
-      // setShowOverlay(false);
       timeoutRef.current = null;
-    }, 900);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -57,10 +56,9 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
       timeoutRef.current = setTimeout(() => {
-        // setShowOverlay(false);
         timeoutRef.current = null;
         isExiting.current = true;
-      }, 900);
+      }, 1000);
     };
 
     window.addEventListener('popstate', handlePopState);
