@@ -16,7 +16,7 @@ export default function DetailSection({ project }: DetailSectionProps) {
   
   return (
     <motion.section 
-      variants={staggerContainer(0.2, 0.5)}
+      variants={staggerContainer(0.2, 0.2)}
       initial='hidden'
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
