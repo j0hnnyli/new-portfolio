@@ -31,9 +31,7 @@ const AnimatePage = ({ children }: { children: ReactNode }) => {
       exit=""
       custom={isPopState}
       onAnimationStart={() => {
-        if(isPopState){
-          setTimeout(() => {setShowOverlay(false)}, 1000)
-        }else{
+        if(!isPopState){
           setShowOverlay(false)
         }
       }}

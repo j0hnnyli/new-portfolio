@@ -56,6 +56,7 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
       timeoutRef.current = setTimeout(() => {
+        setShowOverlay(false);
         timeoutRef.current = null;
         isExiting.current = true;
       }, 1000);
