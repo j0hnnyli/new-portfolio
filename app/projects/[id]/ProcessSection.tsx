@@ -4,15 +4,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer } from '@/lib/motions';
 import { twMerge } from 'tailwind-merge';
+import { usePageTransition } from '@/components/context/PageTransitionContext';
 
 type ProcessSectionProps = {
   myProcess : {title : string, desc : string}[]
 }
 
 export default function ProcessSection({ myProcess }: ProcessSectionProps) {
+  const {isPopState} = usePageTransition();
+
   return (
     <motion.div 
-      variants={staggerContainer(0.2, 0.2)}
+      variants={staggerContainer(0.2, isPopState ? 1 :0.2)}
       initial='hidden'
       whileInView='show'
       viewport={{once : true, amount: 0.2}}

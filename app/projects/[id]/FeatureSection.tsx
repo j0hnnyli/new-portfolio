@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import responsiveAnimationData from '@/assets/responsiveanimation.json';
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer } from '@/lib/motions';
+import { usePageTransition } from '@/components/context/PageTransitionContext';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
@@ -13,6 +14,8 @@ type FeatureSectionProps = {
 }
 
 export default function FeatureSection( { features } : FeatureSectionProps) {
+  const { isPopState } = usePageTransition();
+
   return (
     <div className='max_width p-5 flex flex-col md:flex-row items-center justify-between'>
       <div className='w-3/4 md:w-full overflow-hidden'>
@@ -25,7 +28,7 @@ export default function FeatureSection( { features } : FeatureSectionProps) {
         </h2>
 
         <motion.div 
-          variants={staggerContainer(0.2, 0.2)}
+          variants={staggerContainer(0.2, isPopState ? 1 :0.2)}
           initial="hidden"
           whileInView="show"
           viewport={{ once : true, amount: 0.2}}

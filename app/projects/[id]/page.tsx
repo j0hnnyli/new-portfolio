@@ -50,11 +50,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           />
         </div>
 
-        <section className='bg-secondary_color my-10'>
+        <section className='bg-secondary_color'>
           <FeatureSection features={project.features}/>
         </section>
 
-        <section className='flex flex-col md:flex-row justify-between gap-5 overflow-hidden max_width px-5'>
+        <section className='flex flex-col md:flex-row justify-between gap-5 overflow-hidden max_width py-10 px-5'>
           <SectionLabel
             label="The Process"
             title="The Creative Flow"
