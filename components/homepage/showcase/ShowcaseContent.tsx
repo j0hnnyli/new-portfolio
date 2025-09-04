@@ -4,11 +4,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/lib/motions";
 import TypewriterComponent from "../../TypewriterComponent";
+import { usePageTransition } from "@/components/context/PageTransitionContext";
 
 const ShowcaseContent = () => {
+  const { isPopState } = usePageTransition()
+
   return (
     <motion.div
-      variants={staggerContainer(0.2, 0.2)}
+      variants={staggerContainer(0.2, isPopState ? 1.2 : 0.2)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}

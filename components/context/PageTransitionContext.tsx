@@ -11,6 +11,7 @@ type PageTransitionContextType = {
   setShowOverlay : (bool : boolean) => void;
   nexthref: string;
   isPopState: boolean;
+  setIsPopState: (bool : boolean) => void;
 };
 
 const PageTransitionContext = createContext<PageTransitionContextType | null>(null);
@@ -76,7 +77,8 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
         showOverlay,
         nexthref,
         isPopState,
-        setShowOverlay
+        setShowOverlay,
+        setIsPopState
       }}
     >
       {children}

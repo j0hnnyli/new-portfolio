@@ -20,7 +20,7 @@ const pageVariants = {
 
 const AnimatePage = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
-  const { isPopState, setShowOverlay } = usePageTransition();
+  const { isPopState, setShowOverlay, setIsPopState } = usePageTransition();
 
   return (
     <motion.div
@@ -33,6 +33,11 @@ const AnimatePage = ({ children }: { children: ReactNode }) => {
       onAnimationStart={() => {
         if(!isPopState){
           setShowOverlay(false)
+        }
+      }}
+       onAnimationComplete={() => {
+        if (isPopState) {
+          setIsPopState(false);
         }
       }}
     >

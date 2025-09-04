@@ -7,16 +7,18 @@ import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi'
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer } from '@/lib/motions';
+import { usePageTransition } from '@/components/context/PageTransitionContext';
 
 type DetailSectionProps = {
   project : Projects
 }
 
 export default function DetailSection({ project }: DetailSectionProps) {
+  const { isPopState } = usePageTransition();
   
   return (
     <motion.section 
-      variants={staggerContainer(0.2, 0.2)}
+      variants={staggerContainer(0.2, isPopState ? 1 : 0.2)}
       initial='hidden'
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
