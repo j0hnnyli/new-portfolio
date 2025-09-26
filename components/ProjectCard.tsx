@@ -38,7 +38,7 @@ const ProjectCard = ({ project }: Props) => {
         <div className="h-[1px] rounded-full w-full bg-primary_color my-5" />
 
         <div className="relative w-full h-[190px] lg:h-[300px]">
-          <Image src={project.img} alt={project.title} priority fill className="" />
+          <Image src={project.img} alt={project.title} priority fill className="object-contain" />
         </div>
       </div>
     </NavLinkWrapper>
