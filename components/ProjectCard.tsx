@@ -1,20 +1,31 @@
-"use client";
+"use client"
 
 import { Projects } from "@/lib/types/Project";
 import Image from "next/image";
-import { MdAdsClick } from "react-icons/md";
 import { NavLinkWrapper } from "./NavLink";
+import { useScramble } from 'use-scramble';
+import { MdAdsClick } from "react-icons/md";
 
 type Props = {
   project: Projects;
 };
 
 const ProjectCard = ({ project }: Props) => {
+    const { ref, replay } = useScramble({
+      text : project.title,
+      speed: 0.6,
+      tick: 2,
+      step: 2,
+      scramble: 5,
+      seed: Math.random(),
+      playOnMount: false,
+    });
 
   return (
     <NavLinkWrapper href={`/projects/${project.id}`}>
       <div
-        className="bg-secondary_color p-5 relative group overflow-hidden hover:-translate-y-2 transition-transform duration-300 ease-in-out hover:shadow-lg hover:shadow-third_color"
+        onMouseEnter={replay}
+        className="bg-secondary_color p-5 relative group overflow-hidden hover:-translate-y-2 transition-transform duration-300 ease-in-out hover:shadow-lg hover:shadow-third_color rounded-xl"
       >
         <div className="absolute inset-0 group-hover:bg-gradient-to-br from-third_color/20 via-transparent to-primary_color/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
@@ -28,17 +39,21 @@ const ProjectCard = ({ project }: Props) => {
           </span>
         </div>
 
+        <div className="relative w-full h-[190px] lg:h-[230px]">
+          <Image 
+            src={project.laptopImg} 
+            alt={project.title} 
+            priority 
+            fill 
+            className="object-contain mx-auto group-hover:-translate-y-2 transition-transform duration-300 ease-in-out" 
+          />
+        </div>
+
         <div className="flex justify-between items-center">
-          <h2 className="text-primary_color font-playfair text-4xl">
+          <h2 ref={ref} className="text-primary_color font-playfair text-4xl">
             {project.title}
           </h2>
           <MdAdsClick className="text-primary_color" />
-        </div>
-
-        <div className="h-[1px] rounded-full w-full bg-primary_color my-5" />
-
-        <div className="relative w-full h-[190px] lg:h-[300px]">
-          <Image src={project.img} alt={project.title} priority fill className="object-contain" />
         </div>
       </div>
     </NavLinkWrapper>
