@@ -1,14 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion';
-import { HiOutlineLightBulb } from 'react-icons/hi';  // Import the icons directly
+import { FaPhoneVolume } from "react-icons/fa";
 import { FiBookOpen } from 'react-icons/fi';
 import { TbLayoutDashboard } from 'react-icons/tb';
 
 
 const iconMapping = {
-  "Idea → Interface": HiOutlineLightBulb,
-  "User Experience": TbLayoutDashboard,
+  "Communication": FaPhoneVolume,
+  "User Apporach": TbLayoutDashboard,
   "Always Learning": FiBookOpen
 };
 
