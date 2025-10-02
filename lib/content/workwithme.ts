@@ -1,11 +1,11 @@
 export const workWithMe = [
   {
-    title: "Idea → Interface",
-    desc: "I transform ideas, visions or detailed designs into responsive, and interactive web applications",
+    title: "Communication",
+    desc: "I'm reliable and communicate clearly, keeping clients and teammates informed to ensure smooth projects",
   },
   {
-    title: "User Experience",
-    desc: "I alway prioritize users first ensuring they get the best experience with the interface",
+    title: "User Apporach",
+    desc: "With a strong focus on user experience, I develop websites that are intuitive and easy to navigate",
   },
   {
     title: "Always Learning",
