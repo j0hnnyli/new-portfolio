@@ -6,14 +6,17 @@ import { useState } from "react";
 
 const paths = {
   "/": "Home",
-  "/projects": "Projects",
+  "/mywork": "My Work",
   "/contact": "Contact",
   "/juno": "Juno",
-  "/projects/1": "InvoTracker",
-  "/projects/2": "Ascend",
-  "/projects/3": "Anime Horizon",
-  "/projects/4": "Quizes",
-  "/projects/5": "Desserts",
+  "/mywork/work/1" : "Cricri Curls",
+  "/mywork/work/2" : "CPRI",
+  "/mywork/work/3" : "S Jones Portfolio",
+  "/mywork/project/1": "InvoTracker",
+  "/mywork/project/2": "Ascend",
+  "/mywork/project/3": "Anime Horizon",
+  "/mywork/project/4": "Quizes",
+  "/mywork/project/5": "Desserts",
 };
 
 const overlayVariants = {
@@ -120,9 +123,9 @@ export default function AnimateOverlay({
               </div>
             )}
 
-              <div className="flex items-center gap-5 w-full justify-center">
+              <div className="flex flex-col-reverse items-center gap-5 w-full justify-center">
                 <div className="w-3 h-3 bg-primary_color rounded-full" />
-                <p className="text-primary_color text-5xl font-bold font-playfair tracking-widest">
+                <p className="text-primary_color text-5xl font-bold font-playfair tracking-widest text-center">
                   {paths[pathname as keyof typeof paths]}
                 </p>
               </div>

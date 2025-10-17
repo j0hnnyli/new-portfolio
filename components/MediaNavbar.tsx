@@ -39,8 +39,8 @@ const MediaNavbar = () => {
             <NavLinkWrapper href="/">
               <SheetClose>Home</SheetClose>
             </NavLinkWrapper>
-            <NavLinkWrapper href="/projects">
-              <SheetClose>Projects</SheetClose>
+            <NavLinkWrapper href="/mywork">
+              <SheetClose>My Work</SheetClose>
             </NavLinkWrapper>
             <NavLinkWrapper href="/contact">
               <SheetClose>Contact</SheetClose>

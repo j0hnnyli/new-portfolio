@@ -6,10 +6,13 @@ export type Projects = {
   img: string;
   tags: string[];
   desc:string;
-  laptopImg : string;
   theCreativeProcess: {
     title : string;
     desc : string;
   }[];
   features : string[];
 }
+
+export type MyWork = Omit<Projects, 'gitLink' | 'desc' | 'theCreativeProcess' | 'features'> & {
+  role: string;
+};

@@ -6,10 +6,9 @@ const projects : Projects[] = [
     title: "InvoTracker",
     link: "https://invoice-tracker-gamma.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/invoice-tracker",
-    img: "/invotracker.png",
     tags: ["NextJS", "Tailwind", "Supabase", "Typescript", "Framer-motion", "Shadcn-UI", "Zod", "Recharts"],
     desc: "Effortlessly create, send, and manage invoices with your InvoTracker's personal dashboard, keeping your earnings organized and smooth",
-    laptopImg : "/projectpage/invotrackerlaptop.png",
+    img : "/projectpage/invotrackerlaptop.png",
     theCreativeProcess : [
       {
         title: "1. Discovery",
@@ -42,10 +41,9 @@ const projects : Projects[] = [
     title: "Ascend",
     link: "https://ascend-mu.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/ascend",
-    img: "/ascend.png",
     tags: ["NextJS", "Supabase", "Tailwind", "Typescript", "Framer-Motion", "Zustand","Shadcn-UI"],
     desc: "E-commerce web application with full cart functionality. Users can browse and manage products with accurate size and quantity tracking",
-    laptopImg : "/projectpage/ascendlaptop.png",
+    img : "/projectpage/ascendlaptop.png",
     theCreativeProcess: [
       {
         title: "1. Discovery",
@@ -77,10 +75,9 @@ const projects : Projects[] = [
     title: "Anime Horizon",
     link: "https://animehorizon.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/AnimeHorizon",
-    img: "/animehorizon.png",
     tags: ["NextJS", "Tailwind", "API", "Typescript", "Shadcn-UI"],
     desc: "Web application for anime fans to explore new titles, track favorites, and personalize their watchlist with ease",
-    laptopImg : "/projectpage/animehorizonlaptop.png",
+    img : "/projectpage/animehorizonlaptop.png",
     theCreativeProcess: [
       {
         title: "1. Discovery",
@@ -112,10 +109,9 @@ const projects : Projects[] = [
     title: "Quizes",
     link: "https://quizes-one.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/quizes",
-    img: "/quizes.png",
     tags: ["Typescript", "Vue", "Tailwind", "GSAP"],
     desc: "Quiz web application developed to help beginner programmers to test their knowledge on various programming languages.",
-    laptopImg : "/projectpage/quizeslaptop.png",
+    img : "/projectpage/quizeslaptop.png",
     theCreativeProcess: [
       {
         title: "1. Discovery",
@@ -148,10 +144,9 @@ const projects : Projects[] = [
     title: "Desserts",
     link: "https://desserts-murex.vercel.app/",
     gitLink: "https://github.com/j0hnnyli/desserts",
-    img: "/desserts.png",
     tags: ["NextJS", "Tailwind", "API", "Typescript", "Framer-motion", "Vitest"],
     desc: "A small landing page with smooth, eye-catching section transitions that keep things engaging",
-    laptopImg : "/projectpage/dessertslaptop.png",
+    img : "/projectpage/dessertslaptop.png",
     theCreativeProcess: [
        {
         title: "1. Discovery",

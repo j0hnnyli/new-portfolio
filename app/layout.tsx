@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MediaNavbar from "@/components/MediaNavbar";
 import { PageTransitionProvider } from "@/components/context/PageTransitionContext";
+import Footer from "@/components/Footer";
 
 const playfairDisplay = Playfair_Display({
   weight: ["400"],     
@@ -44,6 +45,7 @@ export default function RootLayout({
           <main>
             {children}
           </main>
+          <Footer />
         </PageTransitionProvider>
       </body>
     </html>
