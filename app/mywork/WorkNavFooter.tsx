@@ -16,7 +16,7 @@ const WorkNavFooter = ({ myworks, id } : WorkNavFooterProps) => {
   const type = isProjects ? 'project' : 'work';
 
   return (
-    <div className='py-20 px-5 bg-secondary_color'>
+    <div className='py-10 px-5 bg-secondary_color'>
       <div className='max_width text-primary_color flex flex-col items-center justify-center'>
         <p>Next Up</p>
         <h3 className='text-4xl font-bold font-playfair mt-10'>{nextWork.title}</h3> 

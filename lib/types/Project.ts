@@ -15,4 +15,7 @@ export type Projects = {
 
 export type MyWork = Omit<Projects, 'gitLink' | 'desc' | 'theCreativeProcess' | 'features'> & {
   role: string;
+  highlights: string[];
+  videoSrc: string;
+  location: string;
 };

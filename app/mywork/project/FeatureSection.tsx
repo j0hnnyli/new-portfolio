@@ -17,8 +17,8 @@ export default function FeatureSection( { features } : FeatureSectionProps) {
   const { isPopState } = usePageTransition();
 
   return (
-    <div className='max_width p-5 flex flex-col md:flex-row items-center justify-between'>
-      <div className='w-3/4 md:w-full overflow-hidden'>
+    <div className='max_width p-5 flex flex-col lg:flex-row items-center justify-between'>
+      <div className='w-3/4 overflow-hidden'>
         <Lottie animationData={responsiveAnimationData} className=''/>
       </div>
 
@@ -49,5 +49,3 @@ export default function FeatureSection( { features } : FeatureSectionProps) {
     </div>
   );
 }
-
-{/* className='scale-[1.2]' */}

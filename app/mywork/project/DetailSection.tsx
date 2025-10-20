@@ -4,7 +4,6 @@ import { Projects } from '@/lib/types/Project';
 import Link from 'next/link';
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { FiExternalLink } from 'react-icons/fi'
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer } from '@/lib/motions';
 import { usePageTransition } from '@/components/context/PageTransitionContext';
@@ -58,24 +57,15 @@ export default function DetailSection({ project }: DetailSectionProps) {
         variants={fadeIn("up", "spring")}
         className='w-full'
       >
-        <p className='text-secondary_color/60'>Links</p>
+        <p className='text-secondary_color/60'>Code</p>
         <div className='w-full h-[1px] rounded-full bg-secondary_color my-5'/>
 
-        <div className="flex items-center gap-5">
-          <Link href={project.gitLink} target='_blank' className="flex items-center gap-1  hover:text-third_color">
-            <FaGithub className="text-xl cursor-pointer"/>
-            <span className="text-lg font-playfair">
-              GitHub
-            </span>
-          </Link>
-
-          <Link href={project.link} target='_blank' className="flex items-center gap-1  hover:text-third_color">
-            <FiExternalLink className="text-xl cursor-pointer"/>
-            <span className="text-lg font-playfair">
-              Live Demo
-            </span>
-          </Link>
-        </div>
+        <Link href={project.gitLink} target='_blank' className="flex items-center gap-1  hover:text-third_color">
+          <FaGithub className="text-xl cursor-pointer"/>
+          <span className="text-lg font-playfair">
+            GitHub
+          </span>
+        </Link>
       </motion.div>
     </motion.section>
   );

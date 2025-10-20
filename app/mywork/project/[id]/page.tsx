@@ -7,6 +7,8 @@ import FeatureSection from '../FeatureSection';
 import { ArrowLeft } from 'lucide-react';
 import { NavLinkWrapper } from '@/components/NavLink';
 import WorkNavFooter from '../../WorkNavFooter';
+import ParallaxScrollContainer from '@/components/ParallaxScrollContainer';
+import Link from 'next/link';
 
 type ProjectPageProps = {
   params: Promise<{id: string}>
@@ -43,6 +45,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               fill
               priority
             />
+
+            <ParallaxScrollContainer className='absolute -bottom-10 right-0 lg:-right-20'>
+              <Link
+                href={project.link}
+                target='_blank'
+                className="group w-20 h-20 md:w-28 md:h-28 flex items-center justify-center rounded-full bg-third_color relative overflow-hidden"
+              >
+                <div className="absolute inset-0 scale-y-0 origin-bottom group-hover:scale-y-100 bg-secondary_color transition-transform duration-300 ease-in-out z-0"/>
+
+                <h2 className="relative z-10 text-primary_color font-bold font-playfair">
+                  Live site
+                </h2>
+              </Link> 
+            </ParallaxScrollContainer>
           </section>
 
           <DetailSection

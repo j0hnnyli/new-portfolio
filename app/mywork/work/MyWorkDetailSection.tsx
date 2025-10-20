@@ -1,7 +1,6 @@
 'use client'
 
 import { MyWork } from '@/lib/types/Project';
-import Link from 'next/link';
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from '@/lib/motions';
 import { usePageTransition } from '@/components/context/PageTransitionContext';
@@ -53,19 +52,11 @@ export default function MyWorkDetailSection({ work }: DetailSectionProps) {
     
       <motion.div 
         variants={fadeIn("up", "spring")}
-        className='w-full flex items-center justify-center'
+        className='w-full'
       >
-        <Link 
-          href={work.link}
-          target='_blank'
-          className="group w-44 h-44 flex items-center justify-center border rounded-full bg-third_color relative overflow-hidden"
-        >
-          <div className="absolute inset-0 scale-y-0 origin-bottom group-hover:scale-y-100 bg-secondary_color transition-transform duration-300 ease-in-out z-0"/>
-
-          <h2 className="relative z-10 text-primary_color font-bold font-playfair tracking-wide text-2xl">
-            Live Demo
-          </h2>
-        </Link>
+        <p className='text-secondary_color/60'>Location</p>
+        <div className='w-full h-[1px] rounded-full bg-secondary_color my-5'/>
+        <p className='text-secondary_color/60'>{work.location}</p>
       </motion.div>
     </motion.section>
   );
