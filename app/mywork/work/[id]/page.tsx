@@ -70,7 +70,7 @@ export default async function MyWorkPage({ params }: MyWorkPage) {
           <WorkHighlightSection highlights={work.highlights} />
         </div>
         
-        {/* <div className="py-10 px-5">
+        <div className="py-10 px-5">
           <div 
             className="mx-auto max-w-4xl aspect-video border-[12px] border-neutral-800 rounded-[1.5rem] shadow-2xl overflow-hidden bg-black"
           >
@@ -94,7 +94,7 @@ export default async function MyWorkPage({ params }: MyWorkPage) {
             <div className="absolute inset-0 scale-y-0 origin-bottom group-hover:scale-y-100 bg-secondary_color transition-transform duration-300 ease-in-out z-0"/>
 
           </Link>
-        </div> */}
+        </div>
 
         <WorkNavFooter myworks={mywork} id={id}/>
       </div>

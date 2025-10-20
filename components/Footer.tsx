@@ -1,11 +1,16 @@
+'use client';
+
+import { twMerge } from "tailwind-merge";
 import ScrollTop from "./ScrollTop";
 import Socials from "./Socials";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
 
   return (
     <footer 
-      className='py-10 px-5 border-t border-secondary_color'
+      className={twMerge('py-10 px-5 border-t border-secondary_color', pathname === '/juno' && 'hidden')}
     >
       <div className="flex flex-col justify-center items-center max_width gap-5 relative">
         <ScrollTop />
