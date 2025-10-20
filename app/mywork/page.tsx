@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 import projects from '@/lib/content/projects'
+import mywork from '@/lib/content/mywork'
 import MyWorkCard from '@/components/MyWorkCard'
 import SectionLabel from '@/components/SectionLabel'
-import mywork from '@/lib/content/mywork'
 import { twMerge } from 'tailwind-merge'
 import { motion } from 'framer-motion'
 
