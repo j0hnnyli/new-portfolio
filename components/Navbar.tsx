@@ -16,7 +16,7 @@ const Navbar = () => {
 
         <div className='font-bold flex items-center gap-5 relative'>
           <NavLink name='Home' href='/'/>
-          <NavLink name='Projects' href='/projects'/>
+          <NavLink name='My Work' href='/mywork'/>
           <NavLink name='Contact' href='/contact'/>
           <ChatBoxLink />
         </div>

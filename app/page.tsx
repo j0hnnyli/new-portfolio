@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import AboutMe from "@/components/homepage/aboutme/AboutMe";
 import MyProcess from "@/components/homepage/myprocess/MyProcess";
 import Quote from "@/components/homepage/Quote";
@@ -16,7 +15,6 @@ export default async function Home() {
       <Quote />
       <MyProcess />
       <Testimonials />
-      <Footer />
     </>
   );
 }
