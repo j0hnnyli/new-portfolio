@@ -18,7 +18,7 @@ export default function MyWorkDetailSection({ work }: DetailSectionProps) {
       initial='hidden'
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className='flex flex-col-reverse md:flex-row gap-10'
+      className='flex flex-col md:flex-row gap-10'
     >
       <motion.div 
         variants={fadeIn("up", "spring")}
