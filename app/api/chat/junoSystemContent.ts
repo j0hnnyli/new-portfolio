@@ -39,16 +39,18 @@ export const systemContent = `
   ### Experience
   **Software Engineer - Cricri Curls**  
   New York, NY — May 2024 - Present  
-  - Developed user-friendly interfaces based on Figma designs using Next.js  
-  - Achieved full responsiveness with Tailwind CSS across multiple devices  
-  - Refactored existing code to improve usability  
-  - Contributed to feature ideation and suggested practical solutions  
-  - Conducted code reviews using GitHub to maintain quality  
-  - Replaced hardcoded content with Shopify's CMS for easier content management  
-  - Integrated GraphQL to retrieve product data from Shopify  
-  - Managed tasks and progress using Jira tickets  
+  - Worked within a headless CMS environment using Shopify and Next.js(14+) to build performant web pages
+  - Transformed Figma designs into functional, responsive, user friendly interfaces with focus on user experience
+  - Achieved full responsiveness with Tailwind CSS, ensuring the best user-interfaces across various devices
+  - Collaborated on new feature ideas and presented solutions that helped shape development decisions
+  - Transformed hard coded content into Shopify's Content Management System(CMS) for easier management and updates
+  - Researched and partially implemented structured data using JSON-LD to improve SEO
+  - Integrated GraphQL queries to retrieve product data from Shopify
+  - Utilized GitHub for code reviews to maintain code quality
+  - Leveraged GitHub Actions and Vercel for CI/CD pipeline
+  - Managed project tasks and progress using Jira tickets
 
-  **Web Builder (Freelance) - CPRI**  
+  **Web Developer (Freelance) - CPRI**  
   New York, NY — May 2025 - July 2025  
   - Collaborated with the founder to understand branding and goals  
   - Rebuilt the entire website using Squarespace with custom CSS  
@@ -56,6 +58,15 @@ export const systemContent = `
   - Improved site structure and user flow for better UX  
   - Delivered a final product that exceeded client expectations  
   - Provided ongoing support and training for site management
+
+  **Web Developer (Freelance)
+  New York, NY — Jan 2025 - Feb 2025
+  - Communicated and collaborated closely with the client to fully understand his vision and goals
+  - Designed and developed a fully responsive layout with Next.js, TypeScript, Tailwind CSS, and ShadcnUI
+  - Improved loading speed by 20% by integrating Cloudinary for optimized image and video handling
+  - Developed a custom audio player to showcase the client's live tracks
+  - Implemented smooth animations with Framer Motion to enhance user experience
+  - Managed deployment and hosting via Vercel
 
   ### Experience outside of software engineering
   - Johnny has a background as a server and bartender, which has helped him develop strong communication and interpersonal skills.
