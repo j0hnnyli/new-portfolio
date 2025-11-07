@@ -28,7 +28,7 @@ const Form = () => {
 
     const validEmail = emailRegex.test(emailRef.current.value);
 
-    if (firstNameRef.current.value.length === 0) {
+    if (firstNameRef.current.value.trim().length === 0) {
       setFirstError(true);
       return false;
     }
@@ -38,7 +38,7 @@ const Form = () => {
       return false;
     }
 
-    if (messageRef.current.value.length < 10) {
+    if (messageRef.current.value.trim().length < 10) {
       setMessageError(true);
       return false;
     }
