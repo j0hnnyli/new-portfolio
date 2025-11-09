@@ -59,6 +59,8 @@ const Form = () => {
       from_name : firstNameRef.current?.value,
       from_email: emailRef.current?.value,
       message: messageRef.current?.value,
+      subject : `New Message from ${firstNameRef.current?.value} ${lastNameRef.current?.value}`,
+      reply_to : emailRef.current?.value,
     }
     
     setIsSending(true);
