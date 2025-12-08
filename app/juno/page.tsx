@@ -6,43 +6,54 @@ import { IoPersonCircleSharp } from "react-icons/io5";
 import { twMerge } from 'tailwind-merge';
 import { FaArrowUp } from "react-icons/fa";
 import ExpandableTextArea from './ExpandableTextArea';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { DefaultChatTransport } from 'ai';
 
 export default function Juno() {
   const chatEndRef = useRef<HTMLDivElement>(null);
-  const { messages, input, handleInputChange, handleSubmit, status } = useChat({
-    api: '/api/chat',
-    initialMessages: [
+  const [input, setInput] = useState('');
+  const { messages, sendMessage, status } = useChat({
+    transport: new DefaultChatTransport({
+      api: '/api/chat',
+    }),
+    messages: [
       {
         id: '1',
         role: 'assistant',
-        content: "Hello I'm Juno, Johnny's personal AI. Curious about Johnny's skills, experience, hobbies? I'm ready to provide all the answers! Just ask!",
+        parts: [
+          { type: 'text', text: "Hello! I'm Juno, Johnny's personal AI. Ask me anything!" }
+        ],
+        status: 'ready',
       },
-    ]
+    ],
   });
 
-  const scrollToBottom = () => {
+  const handleSubmit = (inputVal : string) => {
+    if (inputVal.trim() === '') return;
+    sendMessage({ text : inputVal });
+    setInput('');
+  }
+
+ const scrollToBottom = () => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(() => {
-    if (messages.length >= 2) {
-      scrollToBottom();
-    }
-  }, [messages]);
+    scrollToBottom();
+  }, [messages, status]);
 
   return (
-    <div className="w-full max-w-[800px] mt-20 mx-auto p-5 lg:px-0 pb-36 h-[calc(100vh-80px)]">
+    <div className="w-full max-w-[800px] mt-20 mx-auto p-5 lg:px-0 h-[calc(100vh-80px)]">
       {messages.map((message) => (
         <div
           key={message.id}
           className={twMerge(
             "whitespace-pre-wrap flex items-start gap-2 mb-5",
-            message.role === 'user' ? 'flex-row-reverse' : 'flex-row'
+            message.role === 'assistant' ? 'flex-row' : 'flex-row-reverse'
           )}
         >
           <div className="w-8 h-8 relative flex-shrink-0 bg-secondary_color rounded-full">
-            {message.role === 'user' ? (
+            {message.role !== 'assistant' ? (
               <IoPersonCircleSharp className="text-white text-3xl w-full h-full" />
             ) : (
               <Image
@@ -61,7 +72,7 @@ export default function Juno() {
                   key={`${message.id}-part-${i}`}
                   className={twMerge(
                     'md:max-w-[75%] p-2 text-md text-primary_color rounded-lg w-fit',
-                    message.role === 'user'
+                    message.role !== 'assistant'
                       ? 'bg-third_color text-white'
                       : 'bg-secondary_color/70'
                   )}
@@ -88,20 +99,20 @@ export default function Juno() {
         </div>
       )}
 
-      <div ref={chatEndRef}/>
+      <div ref={chatEndRef} className='pb-36'/>
 
       <div className='bg-primary_color w-full h-26 fixed bottom-0 left-0 right-0 p-5 flex flex-col items-center justify-center gap-2 md:max-w-[800px] mx-auto'>
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            handleSubmit();
+            handleSubmit(input);
           }}
           className="w-full shadow-xl rounded-lg overflow-hidden flex items-center justify-between p-2 bg-white gap-1"
         >
           <ExpandableTextArea
             value={input}
-            onChange={handleInputChange} 
-            onSubmit={handleSubmit}
+            onChange={(e) => setInput(e.target.value)} 
+            onSubmit={() => handleSubmit(input)}
           />
           <button className='w-8 h-8 bg-third_color flex items-center justify-center self-end rounded-full hover:bg-third_color/80'>
             <FaArrowUp className='text-white text-lg' />

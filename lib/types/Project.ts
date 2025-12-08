@@ -18,4 +18,11 @@ export type MyWork = Omit<Projects, 'gitLink' | 'desc' | 'theCreativeProcess' | 
   highlights: string[];
   videoSrc: string;
   location: string;
+  testimonial?: {
+    img: string | null;
+    name: string;
+    title: string;
+    date: string;
+    feedback: string;
+  }
 };
