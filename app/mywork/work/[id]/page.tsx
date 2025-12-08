@@ -7,6 +7,8 @@ import WorkNavFooter from '../../WorkNavFooter';
 import WorkHighlightSection from '../WorkHighlightSection';
 import Link from 'next/link';
 import ParallaxScrollContainer from '@/components/ParallaxScrollContainer';
+import TestimonialCard from '@/components/TestimonialCard';
+
 
 type MyWorkPage = {
   params : Promise<{ id : string}>
@@ -69,30 +71,30 @@ export default async function MyWorkPage({ params }: MyWorkPage) {
           <WorkHighlightSection highlights={work.highlights} />
         </div>
         
-        <div className="py-10 px-5">
+        <div className="py-10 px-5 max-w-4xl mx-auto">
           <div 
             className="mx-auto max-w-4xl aspect-video border-[12px] border-neutral-800 rounded-[1.5rem] shadow-2xl overflow-hidden bg-black"
           >
-          <video 
-            src={work.videoSrc}
-            loop
-            autoPlay
-            muted
-            className='w-full h-auto rounded-lg'
-          />
+            <video 
+              src={work.videoSrc}
+              loop
+              autoPlay
+              muted
+              className='w-full h-auto rounded-lg'
+            />
           </div>
 
-          <Link
-            href={work.link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-third_color hover:bg-third_color transition-colors text-white font-medium px-6 py-3 rounded-full mx-auto block w-fit mt-5 relative group overflow-hidden"
-          >
-            <span className='relative z-10'>View Live Site</span>
-
-            <div className="absolute inset-0 scale-y-0 origin-bottom group-hover:scale-y-100 bg-secondary_color transition-transform duration-300 ease-in-out z-0"/>
-
-          </Link>
+          {work.testimonial &&  (
+            <div className="mt-10">
+              <TestimonialCard
+                name={work.testimonial.name}
+                img={work.testimonial.img}
+                title={work.testimonial.title}
+                feedback={work.testimonial.feedback}
+                date={work.testimonial.date}
+              />
+            </div>
+          )}
         </div>
 
         <WorkNavFooter myworks={mywork} id={id}/>

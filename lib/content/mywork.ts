@@ -39,6 +39,14 @@ const mywork : MyWork[] = [
       "Delivered a final product the founder was highly satisfied with",
       "Provided ongoing support for easy site management",
     ],
+    testimonial: {
+      img: null,
+      name: "Luis Santana",
+      title: "Founder of CPRI",
+      date: "September 28, 2025",
+      feedback:
+        "I would recommend Johnny any day for website development. Johnny communicated with me very diligently and made sure everything was in working order. Johnny also took all of my website ideas into account and elevated my website to the place it is right now! It is amazing the work he did! It made my website professional and easy to navigate!",
+    }
   },
   {
     id: 3,
@@ -58,6 +66,14 @@ const mywork : MyWork[] = [
       "Designed with a focus on clean UI, strong UX, and performance",
       "Deployed the site with Vercel",
     ],
+    testimonial: {
+      img: "/sjones.png",
+      name: "Stephon Jones",
+      title: "Singer & Entertainer",
+      date: "Feburary 14, 2025",
+      feedback:
+        "I highly recommend Johnny Li for your next website. From start to finish, he was professional, communicative, and took the time to truly understand my vision. He brought it to life with a stunning website that exceeded my satisfaction. Although I wasn't able to launch the site due to personal reasons, I'm very grateful for Johnny's patience and craftsmanship. If you're looking for a reliable, talented web developer, Johnny is the one to call.",  
+      }, 
   }
 ]
 

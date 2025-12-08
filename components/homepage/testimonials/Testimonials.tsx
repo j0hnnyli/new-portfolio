@@ -12,7 +12,7 @@ export default function Testimonials() {
 
   return (
     <section className='bg-secondary_color py-16'>
-      <div className='max_width px-5'>
+      <div className='max_width px-5 '>
         <SectionLabel
           label='What Clients Say'
           title='Testimonials'
