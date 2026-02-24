@@ -1,41 +1,41 @@
-'use client'
+"use client"
 
-import { motion } from 'framer-motion';
+import { fadeIn } from "@/lib/motions";
+import { motion } from "framer-motion";
 import { FaPhoneVolume } from "react-icons/fa";
-import { FiBookOpen } from 'react-icons/fi';
-import { TbLayoutDashboard } from 'react-icons/tb';
-
+import { FaBrain } from "react-icons/fa";
+import { FaRocket } from "react-icons/fa";
 
 const iconMapping = {
-  "Communication": FaPhoneVolume,
-  "User Apporach": TbLayoutDashboard,
-  "Always Learning": FiBookOpen
+  "Clear Communication": FaPhoneVolume,
+  "User First Approach": FaRocket,
+  "Always Learning": FaBrain
 };
 
 type Props = {
   title: string;
   desc: string;
+  number: string;
 };
 
-const WhyMeContainers = ({title, desc} : Props) => {
+const WhyMeContainers = ({title, desc, number} : Props) => {
   const Icon = iconMapping[title as keyof typeof iconMapping];
 
   return (
-    <motion.div
-      initial={{ scaleX: 0, originX: 'left' }}
-      whileInView={{ scaleX: 1 }} 
-      transition={{ duration: 0.5, type: "spring", stiffness: 50 }} 
-      viewport={{once: true, amount: 0.3}}
-      className="w-full bg-primary_color rounded-xl p-5 h-[300px] relative overflow-hidden group"
-    >
-      <div className="flex items-center gap-5">
-        <Icon className="text-3xl" />
-        <h2 className="text-xl font-playfair font-bold">{title}</h2>
-      </div>
+    <motion.div variants={fadeIn("up", "spring")} className="p-12 border w-full group relative">
+      <div className="absolute top-0 left-0 origin-left w-full h-[2px] bg-third_color scale-x-0 group-hover:scale-x-100 transition-transform duration-300"/>
 
-      <div className="absolute top-20 left-10 h-full w-full border rounded-xl group-hover:left-5 group-hover:top-16 transition-all duration-300 ease-in-out bg-[#7B6D8D] z-0 p-5 text-primary_color font-bold">
-        {desc}
+      <div className="absolute left-0 bottom-0 h-full w-full bg-third_color/15 scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-300"/>
+
+      <p className="text-third_color text-xs">{number}</p>
+
+      <div className="mt-10 border border-secondary_color/30 w-16 h-16 rounded-full flex items-center justify-center group-hover:border-third_color">
+        <Icon size={30} className="group-hover:text-third_color group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300"/>
       </div>
+      
+      <h2 className="mt-5 font-bold font-fraunces text-xl">{title}</h2>
+
+      <p className="mt-5 opacity-70 text-sm">{desc}</p>
     </motion.div>
   )
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Playfair_Display } from 'next/font/google';
+import { Playfair_Display, Fraunces, DM_Mono } from 'next/font/google';
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MediaNavbar from "@/components/MediaNavbar";
@@ -11,6 +11,18 @@ const playfairDisplay = Playfair_Display({
   weight: ["400"],     
   subsets: ["latin"],      
   variable: "--playfair-font", 
+})
+
+const fraunces = Fraunces({
+  weight: ["400"],     
+  subsets: ["latin"],      
+  variable: "--fraunces-font", 
+})
+
+const dmMono = DM_Mono({
+  weight: ["400"],     
+  subsets: ["latin"],      
+  variable: "--dm-mono-font", 
 })
 
 const geistSans = localFont({
@@ -37,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} antialiased bg-primary_color text-secondary_color`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${fraunces.variable} ${dmMono.variable} antialiased bg-primary_color text-secondary_color font-dmMono`}
         >
         <PageTransitionProvider>
           <Navbar />

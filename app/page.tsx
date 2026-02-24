@@ -10,9 +10,9 @@ export default async function Home() {
     <> 
       <Showcase />
       <WhyWorkWithMe />
-      <AboutMe />
+      {/* <AboutMe />
       <Quote />
-      <MyProcess />
+      <MyProcess /> */}
     </>
   );
 }

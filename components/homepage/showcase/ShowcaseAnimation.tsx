@@ -7,7 +7,7 @@ const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const ShowcaseAnimation = () => {
   return (
-    <div className='w-full overflow-hidden'>
+    <div className='w-full overflow-hidden hidden md:flex'>
       <Lottie animationData={desktopAnimationData} className='scale-[1.2]'/>
     </div>
   )

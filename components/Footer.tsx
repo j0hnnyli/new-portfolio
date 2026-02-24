@@ -10,9 +10,9 @@ const Footer = () => {
 
   return (
     <footer 
-      className={twMerge('py-10 px-5 border-t border-secondary_color', pathname === '/juno' && 'hidden')}
+      // className={twMerge('py-10 px-5 border-t border-secondary_color', pathname === '/juno' && 'hidden')}
     >
-      <div className="flex flex-col justify-center items-center max_width gap-5 relative">
+      {/* <div className="flex flex-col justify-center items-center max_width gap-5 relative">
         <ScrollTop />
 
         <div className='p-10 rounded-xl text-center w-full md:w-[70%] font-playfair bg-secondary_color text-primary_color mx-auto'>
@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
 
         <Socials />
-      </div>
+      </div> */}
     </footer>
   )
 }

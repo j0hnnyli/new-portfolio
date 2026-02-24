@@ -20,6 +20,8 @@ export default {
   		},
 			fontFamily:{
 				playfair: ['var(--playfair-font)', 'serif'],
+				fraunces: ['var(--fraunces-font)', 'georgia' ,'serif'],
+				dmMono: ['var(--dm-mono-font)', 'monospace'],
 			},
   		borderRadius: {
   			lg: 'var(--radius)',
