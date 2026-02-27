@@ -39,7 +39,7 @@ const Socials = () => {
           href={href}
           target="_blank"
           aria-label={label}
-          className="cursor-pointer hover:text-third_color"
+          className="cursor-pointer hover:-translate-y-1 transition-transform duration-300 ease-in-out"
         >
           <Icon />
         </Link>

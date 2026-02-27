@@ -1,14 +1,13 @@
 import { FaArrowDown } from "react-icons/fa";
 import ShowcaseContent from "./ShowcaseContent";
 import ShowcaseAnimation from "./ShowcaseAnimation";
+import Grid from "@/components/Grid";
 
 const Showcase = () => {
   return (
     <>
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:80px_80px] pointer-events-none -z-10">
-      </div>
-
       <div className="h-screen max-h-[850px] relative mb-10 max_width px-5 md:flex md:justify-center md:items-center">
+        <Grid mode="light"/>
 
         <div className="relative z-10 pt-20 md:pt-24 flex flex-row items-center justify-between gap-5 md:mb-10 h-full">
           <ShowcaseContent />
