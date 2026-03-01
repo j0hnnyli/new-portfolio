@@ -11,6 +11,7 @@ export type Projects = {
     desc : string;
   }[];
   features : string[];
+  description: string;
 }
 
 export type MyWork = Omit<Projects, 'gitLink' | 'desc' | 'theCreativeProcess' | 'features'> & {

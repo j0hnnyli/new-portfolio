@@ -8,7 +8,7 @@ const projects : Projects[] = [
     gitLink: "https://github.com/j0hnnyli/invoice-tracker",
     tags: ["NextJS", "Tailwind", "Supabase", "Typescript", "Framer-motion", "Shadcn-UI", "Zod", "Recharts"],
     desc: "Effortlessly create, send, and manage invoices with your InvoTracker's personal dashboard, keeping your earnings organized and smooth",
-    img : "/projectpage/invotrackerlaptop.png",
+    img : "/projectpage/invoicetracker.png",
     theCreativeProcess : [
       {
         title: "1. Discovery",
@@ -34,7 +34,8 @@ const projects : Projects[] = [
       "Dashboard with visual analytics",
       "Invoice list with filtering functionality",
       "User Auth",
-    ]
+    ],
+    description: "A personal invoicing dashboard that lets freelancers create, send, and manage invoices, with real time earnings tracking and visual analytics, all in one place.",
   },
   {
     id: 2,
@@ -43,7 +44,7 @@ const projects : Projects[] = [
     gitLink: "https://github.com/j0hnnyli/ascend",
     tags: ["NextJS", "Supabase", "Tailwind", "Typescript", "Framer-Motion", "Zustand","Shadcn-UI"],
     desc: "E-commerce web application with full cart functionality. Users can browse and manage products with accurate size and quantity tracking",
-    img : "/projectpage/ascendlaptop.png",
+    img : "/projectpage/ascend.png",
     theCreativeProcess: [
       {
         title: "1. Discovery",
@@ -68,7 +69,8 @@ const projects : Projects[] = [
       "Cart management with accurate size & quantity tracking",
       "Smooth UI transitions and Animations",    
       "Persistent cart items",  
-    ]
+    ],
+    description: "A full Ecommerce experience built from scratch. Browse products, manage a cart with accurate size and quantity tracking, and enjoy smooth UI transitions throughout"
   },
   {
     id: 3,
@@ -77,7 +79,7 @@ const projects : Projects[] = [
     gitLink: "https://github.com/j0hnnyli/AnimeHorizon",
     tags: ["NextJS", "Tailwind", "API", "Typescript", "Shadcn-UI"],
     desc: "Web application for anime fans to explore new titles, track favorites, and personalize their watchlist with ease",
-    img : "/projectpage/animehorizonlaptop.png",
+    img : "/projectpage/animehorizon.png",
     theCreativeProcess: [
       {
         title: "1. Discovery",
@@ -102,7 +104,8 @@ const projects : Projects[] = [
       "Search anime titles dynamically",
       "Add/remove anime to personal anime list",
       "Persistent personal anime list",
-    ]
+    ],
+    description: "A discovery platform for anime fans to explore new titles, search dynamically, and build a persistent personal watchlist all in a clean, visually driven interface"
   },
   {
     id: 4,
@@ -111,7 +114,7 @@ const projects : Projects[] = [
     gitLink: "https://github.com/j0hnnyli/quizes",
     tags: ["Typescript", "Vue", "Tailwind", "GSAP"],
     desc: "Quiz web application developed to help beginner programmers to test their knowledge on various programming languages.",
-    img : "/projectpage/quizeslaptop.png",
+    img : "/projectpage/quizes.png",
     theCreativeProcess: [
       {
         title: "1. Discovery",
@@ -137,7 +140,8 @@ const projects : Projects[] = [
       "Track correct/incorrect answers during quiz flow",
       "Engaging, responsive layout tailored for learning",
       "Great for beginner programmers testing knowledge"
-    ]
+    ],
+    description: "An interactive quiz app for beginner programmers to test their knowledge across programming languages",
   },
   {
      id: 5,
@@ -146,7 +150,7 @@ const projects : Projects[] = [
     gitLink: "https://github.com/j0hnnyli/desserts",
     tags: ["NextJS", "Tailwind", "API", "Typescript", "Framer-motion", "Vitest"],
     desc: "A small landing page with smooth, eye-catching section transitions that keep things engaging",
-    img : "/projectpage/dessertslaptop.png",
+    img : "/projectpage/desserts.png",
     theCreativeProcess: [
        {
         title: "1. Discovery",
@@ -170,7 +174,8 @@ const projects : Projects[] = [
       "Visually engaging scroll based section animations",
       "Clean and minimalist design for focus on visuals",
       "Built with testing"
-    ]
+    ],
+    description: "A visually rich landing page experiment focused on scroll-based animations and smooth section transitions, built to push Framer Motion skills to the limit"
   },
 ]
 

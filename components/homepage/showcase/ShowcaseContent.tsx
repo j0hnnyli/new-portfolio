@@ -11,7 +11,7 @@ const ShowcaseContent = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="w-full flex flex-col gap-8 border"
+      className="w-full flex flex-col gap-8"
     >
       <div
         className="flex flex-col items-start"
