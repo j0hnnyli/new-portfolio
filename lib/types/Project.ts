@@ -7,6 +7,7 @@ export type Projects = {
   tags: string[];
   desc:string;
   theCreativeProcess: {
+    tag : string;
     title : string;
     desc : string;
   }[];

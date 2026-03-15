@@ -28,7 +28,7 @@ const MyWorkPage = () => {
             letterSpacing="-8"
             fill="none"
             stroke="#ddd8cc"
-            stroke-width="1.5"
+            strokeWidth="1.5"
           >WORK</text>
         </svg>
         <Grid mode="light"/>
@@ -44,14 +44,14 @@ const MyWorkPage = () => {
 
       <div className='px-5 py-20 max_width'>
         <div className='p-1 bg-white font-dmMono flex gap-1 border rounded-[5px] w-fit mb-10'>
-          <button className={twMerge('py-2 px-5 uppercase rounded-[5px] text-xs', tab === 'Professional' ? 'bg-third_color text-white' : 'hover:bg-gray-200')} onClick={() => setTab('Professional')}>
+          <button className={twMerge('py-2 px-5 uppercase rounded-[5px] text-xs flex items-center justify-center gap-2', tab === 'Professional' ? 'bg-third_color text-white' : 'hover:bg-gray-200')} onClick={() => setTab('Professional')}>
             Professional Work
-            <span className='ml-2 bg-primary_color/20 py-1 px-2 rounded-full'>{mywork.length}</span>
+            <span className='bg-primary_color/20 py-1 px-2 rounded-full'>{mywork.length}</span>
           </button>
           
-          <button className={twMerge('py-2 px-5 uppercase rounded-[5px] text-xs', tab === 'Personal' ? 'bg-third_color text-white' : 'hover:bg-gray-200')} onClick={() => setTab('Personal')}>
+          <button className={twMerge('py-2 px-5 uppercase rounded-[5px] text-xs flex items-center justify-center gap-2', tab === 'Personal' ? 'bg-third_color text-white' : 'hover:bg-gray-200')} onClick={() => setTab('Personal')}>
             Personal Projects
-            <span className='ml-2 bg-primary_color/20 py-1 px-2 rounded-full'>{projects.length}</span>
+            <span className='bg-primary_color/20 py-1 px-2 rounded-full'>{projects.length}</span>
           </button>
         </div>
         
@@ -85,47 +85,12 @@ const MyWorkPage = () => {
               <MyWorkCard
                 key={project.title}
                 project={project}
-                href={`/mywork/work/${project.id}`}
+                href={`/mywork/project/${project.id}`}
                 index={index}
               />
             ))}
           </motion.section>
         )}
-
-        {/* {tab === "Professional" && (
-          <motion.section
-            initial={{ y: 20 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
-            className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-5'  
-          >
-            {mywork.map((work) => (
-              <MyWorkCard
-                key={work.title}
-                project={work}
-                href={`/mywork/work/${work.id}`}
-              />
-              ))
-            }
-          </motion.section>
-        )}
-
-        {tab === "Personal" && (
-          <motion.section 
-            initial={{ y: 20 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
-            className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-5'
-          >
-            {projects.map((project) => (
-              <MyWorkCard
-                key={project.title}
-                project={project}
-                href={`/mywork/project/${project.id}`}
-              />
-            ))}
-          </motion.section>
-        )} */}
       </div>
     </div>
   )
