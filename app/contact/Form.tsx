@@ -86,7 +86,7 @@ const Form = () => {
     <>
       <form 
         onSubmit={handleSubmit} 
-        className="w-full md:w-[50%]"
+        className="w-full"
       >
         <div className="flex items-center gap-5 mb-5 justify-between">
           <div className="flex flex-col w-full relative">
@@ -152,7 +152,7 @@ const Form = () => {
             }}
             placeholder="Hello! I woud love to connect with you . . ."
             cols={10}
-            rows={5}
+            rows={10}
             className={`py-2 w-full mt-1 outline-none bg-primary_color border-b ${
               messageError ? "border-error_red" : "border-secondary_color"
             }`}

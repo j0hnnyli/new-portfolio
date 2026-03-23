@@ -7,7 +7,6 @@ import { twMerge } from 'tailwind-merge'
 import { motion } from 'framer-motion'
 import Grid from '@/components/Grid'
 import MyWorkCard from '@/components/MyWorkCard'
-import Image from 'next/image'
 
 const MyWorkPage = () => {
   const [ tab, setTab ] = useState<"Professional" | "Personal">("Professional");
@@ -37,8 +36,8 @@ const MyWorkPage = () => {
               <div className="w-10 h-[2px] bg-third_color"/>
               <p className="uppercase text-sm text-third_color">Design meets code</p>
             </div>
-            <h2 className="font-fraunces text-5xl">My <span className="text-third_color italic">Know</span></h2>
-            <p className='opacity-70'>A collection of projects I've built from client sites to personal experiments</p>
+            <h2 className="font-fraunces text-5xl font-bold">My <span className="text-third_color italic">Know</span></h2>
+            <p className='opacity-70 text-xs md:text-sm'>A collection of projects I&apos;ve built from client sites to personal experiments</p>
         </div>
       </div>
 
