@@ -4,26 +4,68 @@ import { twMerge } from "tailwind-merge";
 import ScrollTop from "./ScrollTop";
 import Socials from "./Socials";
 import { usePathname } from "next/navigation";
+import Grid from "./Grid";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 const Footer = () => {
   const pathname = usePathname();
 
+  const isProjectOrWork = pathname.includes('mywork/')
+
   return (
-    <footer 
-      className={twMerge('py-10 px-5 border-t border-secondary_color', pathname === '/juno' && 'hidden')}
-    >
-      <div className="flex flex-col justify-center items-center max_width gap-5 relative">
-        <ScrollTop />
-
-        <div className='p-10 rounded-xl text-center w-full md:w-[70%] font-playfair bg-secondary_color text-primary_color mx-auto'>
-          <div className="flex gap-2 items-center justify-center border border-primary_color rounded-full w-[180px] mx-auto">
-            <div className="h-[10px] w-[10px] rounded-full bg-third_color animate-pulse"/>
-            <p className="text-sm">Your idea starts here </p>
+    <footer
+      className={
+        twMerge('pt-20 bg-secondary_color relative', 
+          pathname === '/juno' && 'hidden', 
+          isProjectOrWork && 'bg-primary_color'
+        )}
+      >
+      {!isProjectOrWork && <Grid mode= "dark"/>}
+        <div
+          className="relative flex flex-col justify-center items-center px-5 mb-20"
+        >
+          <div className="flex items-center gap-5">
+            <div className="w-10 h-[2px] bg-third_color"/>
+            <p className="uppercase text-sm text-third_color">your idea starts here</p>
           </div>
-          <h2 className="text-xl md:text-4xl mt-5">Let&apos;s Turn Your Vision into Reality</h2>
-        </div>
 
-        <Socials />
+          <div className="mt-5">
+            <h2 className={twMerge("text-5xl font-fraunces text-center text-primary_color", isProjectOrWork && 'text-secondary_color')}>
+              Let&apos;s Turn Your
+            </h2>
+            <h2 className={twMerge("text-5xl font-fraunces text-center text-primary_color", isProjectOrWork && 'text-secondary_color')}>
+              Vision into
+              <span className="text-third_color italic"> Realty</span>
+            </h2>
+          </div>
+
+          <p className={twMerge("text-primary_color mt-5 flex flex-col items-center justify-center text-center opacity-70 text-sm", isProjectOrWork && 'text-secondary_color')}>
+            <span>Have a project in mind? I&apos;d love to hear about it.</span>
+            <span>Let&apos;s connect and build something great together.</span>
+          </p>
+
+          <div className="mt-10 flex items-center justify-center gap-5">
+            <Link href="/contact" className="py-4 px-7 bg-third_color text-primary_color uppercase text-sm group">
+              start a project
+              <span>
+                <FaArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300"/></span>
+            </Link>
+            <Link href="/mywork" className={twMerge("border-b pb-2 opacity-70 hover:opacity-100 my-auto text-sm uppercase text-primary_color self-end", isProjectOrWork && 'text-secondary_color/70')}>
+              contact me
+            </Link>
+          </div>
+        </div>
+      <div className="bg-[#2A2F36] relative">
+        <div className="max_width flex items-center justify-between text-primary_color py-8 px-5">
+          <h2 className='font-extrabold font-fraunces text-xl text-primary_color'>
+            <span className=''>Johnny</span> 
+            <span className='text-third_color ml-1'>Li</span>
+            <span className='ml-1'>_</span>
+          </h2>
+          <Socials />
+          <ScrollTop />
+        </div>
       </div>
     </footer>
   )

@@ -8,6 +8,7 @@ import { FaArrowUp } from "react-icons/fa";
 import ExpandableTextArea from './ExpandableTextArea';
 import { useEffect, useRef, useState } from 'react';
 import { DefaultChatTransport } from 'ai';
+import Grid from '@/components/Grid';
 
 export default function Juno() {
   const chatEndRef = useRef<HTMLDivElement>(null);
@@ -16,16 +17,6 @@ export default function Juno() {
     transport: new DefaultChatTransport({
       api: '/api/chat',
     }),
-    messages: [
-      {
-        id: '1',
-        role: 'assistant',
-        parts: [
-          { type: 'text', text: "Hello! I'm Juno, Johnny's personal AI. Ask me anything!" }
-        ],
-        status: 'ready',
-      },
-    ],
   });
 
   const handleSubmit = (inputVal : string) => {
@@ -43,12 +34,32 @@ export default function Juno() {
   }, [messages, status]);
 
   return (
-    <div className="w-full max-w-[800px] mt-20 mx-auto p-5 lg:px-0 h-[calc(100vh-80px)]">
+    <div className="w-full max-w-[800px] mt-20 mx-auto p-5 lg:px-0 relative">
+      <Grid mode='light' className="fixed"/>
+      
+      {messages.length === 0 && (
+        <div
+          className="w-full h-full border flex flex-col items-center justify-center z-10 relative p-5 gap-5"
+        >
+          <div className='p-5 w-36 h-36 rounded-full flex items-center justify-center bg-secondary_color overflow-hidden'>
+            <Image
+              src="/juno.png"
+              alt="Juno"
+              width={200}
+              height={200}
+              className='w-40 h-40 object-cover mt-5'
+            />
+          </div>
+          <h2 className="text-2xl font-bold text-center">Welcome to Juno!</h2>
+          <p className="text-center text-third_color text-sm">Ask me anything about Johnny to start a conversation.</p>
+        </div>
+      )}
+
       {messages.map((message) => (
         <div
           key={message.id}
           className={twMerge(
-            "whitespace-pre-wrap flex items-start gap-2 mb-5",
+            "whitespace-pre-wrap flex items-start gap-2 mb-5 relative",
             message.role === 'assistant' ? 'flex-row' : 'flex-row-reverse'
           )}
         >
@@ -101,13 +112,13 @@ export default function Juno() {
 
       <div ref={chatEndRef} className='pb-36'/>
 
-      <div className='bg-primary_color w-full h-26 fixed bottom-0 left-0 right-0 p-5 flex flex-col items-center justify-center gap-2 md:max-w-[800px] mx-auto'>
+      <div className='bg-primary_color border h-26 fixed bottom-0 left-0 right-0 p-5 flex flex-col items-center justify-center gap-2 mx-auto z-10'>
         <form
           onSubmit={(e) => {
             e.preventDefault();
             handleSubmit(input);
           }}
-          className="w-full shadow-xl rounded-lg overflow-hidden flex items-center justify-between p-2 bg-white gap-1"
+          className="w-full md:max-w-[800px] shadow-xl rounded-lg overflow-hidden flex items-center justify-between p-2 bg-white gap-1 "
         >
           <ExpandableTextArea
             value={input}

@@ -1,50 +1,67 @@
+import Grid from '@/components/Grid';
 import { NavLinkWrapper } from '@/components/NavLink';
 import { MyWork, Projects } from '@/lib/types/Project'
 import Image from 'next/image';
+import Link from 'next/link';
 import { GoArrowRight } from "react-icons/go";
 
 type WorkNavFooterProps = {
   myworks: MyWork[] | Projects[];
-  id : string;
+  id: string;
 }
 
-const WorkNavFooter = ({ myworks, id } : WorkNavFooterProps) => {
+const WorkNavFooter = ({ myworks, id }: WorkNavFooterProps) => {
   const index = myworks.findIndex((work) => work.id === Number(id));
   const nextWork = myworks[(index + 1) % myworks.length];
-  
+
   const isProjects = 'features' in myworks[0];
   const type = isProjects ? 'project' : 'work';
 
   return (
-    <div className='py-10 px-5 bg-secondary_color'>
-      <div className='max_width text-primary_color flex flex-col items-center justify-center'>
-        <p>Next Up</p>
-        <h3 className='text-4xl font-bold font-playfair mt-10'>{nextWork.title}</h3> 
+    <section className="bg-secondary_color relative overflow-hidden group">
+      <Grid mode="dark"/>
 
-        <div
-          className="relative h-[200px] w-full max-w-[350px] md:h-[300px] md:max-w-[500px] mx-auto"
-        >
+      <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-third_color/20 blur-3xl pointer-events-none" />
+
+      <div className="max_width relative z-10 grid grid-cols-1 md:grid-cols-2 min-h-[380px]">
+        <div className="flex flex-col justify-center gap-5 px-5 py-10">
+          <div className="flex items-center gap-3">
+            <div className="w-5 h-[2px] bg-third_color/70" />
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-third_color/70">
+              Next {type}
+            </p>
+          </div>
+
+          <h2 className="font-serif text-4xl lg:text-5xl font-semibold tracking-tight text-primary_color leading-tight">
+            {nextWork.title}
+          </h2>
+
+          <NavLinkWrapper
+            href={`/mywork/${type}/${nextWork.id}`}
+            className="group inline-flex items-center gap-3 bg-primary_color text-secondary_color 
+              font-mono text-xs uppercase tracking-widest px-6 py-3 rounded-sm w-fit
+              hover:bg-third_color hover:text-white transition-all duration-300 group"
+          >
+            View {type}
+            <GoArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+          </NavLinkWrapper>
+        </div>
+
+        <div className="relative overflow-hidden">
           <Image
             src={nextWork.img}
             alt={nextWork.title}
-            fill
+            width={600}
+            height={400}
             priority
+            className="w-full h-full object-cover saturate-90 
+            group-hover:scale-105 transition-all duration-300
+            brightness-75 group-hover:brightness-90"
           />
+          <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-secondary_color to-transparent" />
         </div>
-
-        <div className='h-[1px] rounded-full w-full max-w-[750px] mx-auto bg-primary_color'/>
-
-        <NavLinkWrapper 
-          href={`/mywork/${type}/${nextWork.id}`} 
-          className='mt-10 flex items-center gap-2 group border p-5 rounded-full relative overflow-hidden group'
-        >
-          <h2 className='relative z-10'>Next</h2>
-          <span className='relative z-10 group-hover:translate-x-1 transition-transform duration-300 ease-in-out'><GoArrowRight size={25}/></span>
-
-          <div className="absolute inset-0 scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-300 ease-in-out bg-third_color z-0"/>
-        </NavLinkWrapper>
-      </div>  
-    </div>
+      </div>
+    </section>
   )
 }
 

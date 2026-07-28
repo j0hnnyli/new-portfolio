@@ -7,10 +7,12 @@ export type Projects = {
   tags: string[];
   desc:string;
   theCreativeProcess: {
+    tag : string;
     title : string;
     desc : string;
   }[];
   features : string[];
+  description: string;
 }
 
 export type MyWork = Omit<Projects, 'gitLink' | 'desc' | 'theCreativeProcess' | 'features'> & {

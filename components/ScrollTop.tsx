@@ -14,9 +14,9 @@ const ScrollTop = () => {
   return (
     <button 
       onClick={handleScrollTop}
-      className="absolute bottom-0 right-0 hover:text-third_color" 
+      className="group" 
     >
-      <FaChevronUp className="text-2xl"/>
+      <FaChevronUp className="text-2xl group-hover:-translate-y-1 duration-300 transition-transform ease-in-out"/>
     </button>
   )
 }

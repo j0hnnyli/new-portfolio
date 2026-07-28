@@ -1,32 +1,6 @@
-import { FaXTwitter } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
 // import { FaLinkedinIn } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
 import Link from "next/link";
-
-
-const links = [
-  {
-    href:"mailto:lijohnny21@gmail.com",
-    label: "Email",
-    icon : IoMdMail
-  },
-  {
-    href: "https://github.com/j0hnnyli",
-    label: "GitHub Profile",
-    icon : FaGithub
-  },
-  // {
-  //   href: "https://www.linkedin.com/in/johnny-li-3a0482331",
-  //   label: "Linkedin Profile",
-  //   icon : FaLinkedinIn
-  // },
-  {
-    href:"https://x.com/jojotech31",
-    label: "Twitter/X Profile",
-    icon : FaXTwitter
-  },
-]
+import { links } from "@/lib/content/links";
 
 const Socials = () => {
   return (
@@ -39,7 +13,7 @@ const Socials = () => {
           href={href}
           target="_blank"
           aria-label={label}
-          className="cursor-pointer hover:text-third_color"
+          className="cursor-pointer hover:-translate-y-1 transition-transform duration-300 ease-in-out"
         >
           <Icon />
         </Link>
