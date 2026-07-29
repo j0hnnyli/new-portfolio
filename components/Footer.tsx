@@ -5,8 +5,8 @@ import ScrollTop from "./ScrollTop";
 import Socials from "./Socials";
 import { usePathname } from "next/navigation";
 import Grid from "./Grid";
-import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import NavLink from "./NavLink";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -46,14 +46,17 @@ const Footer = () => {
           </p>
 
           <div className="mt-10 flex items-center justify-center gap-5">
-            <Link href="/contact" className="py-4 px-7 bg-third_color text-primary_color uppercase text-sm group">
+            <div className="py-4 px-7 bg-third_color text-primary_color uppercase text-sm group">
               start a project
               <span>
                 <FaArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300"/></span>
-            </Link>
-            <Link href="/mywork" className={twMerge("border-b pb-2 opacity-70 hover:opacity-100 my-auto text-sm uppercase text-primary_color self-end", isProjectOrWork && 'text-secondary_color/70')}>
-              contact me
-            </Link>
+            </div>
+
+            <NavLink 
+              name="contact me" 
+              href="/contact" 
+              className={twMerge("border-b pb-2 opacity-70 hover:opacity-100 my-auto text-sm uppercase text-primary_color self-end", isProjectOrWork && 'text-secondary_color/70')}
+            />
           </div>
         </div>
       <div className="bg-[#2A2F36] relative">
